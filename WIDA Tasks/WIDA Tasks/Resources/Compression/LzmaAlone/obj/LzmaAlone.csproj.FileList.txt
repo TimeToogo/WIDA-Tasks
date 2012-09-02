@@ -1,0 +1,8 @@
+.\bin\Debug\Lzma#.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Lzma#.pdb
+.\bin\Debug\Lzma#.dll
+obj\Debug\Lzma#.dll
+.\bin\Release\Lzma#.dll
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\Lzma#.dll

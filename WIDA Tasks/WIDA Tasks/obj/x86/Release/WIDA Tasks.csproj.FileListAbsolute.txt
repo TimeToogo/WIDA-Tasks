@@ -1,0 +1,20 @@
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\bin\Release\WIDA Tasks.exe.config
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\bin\Release\WIDA Tasks.exe
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\bin\Release\WIDA Tasks.pdb
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\bin\Release\ICSharpCode.AvalonEdit.dll
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\bin\Release\ICSharpCode.AvalonEdit.xml
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Release\WIDA.Forms.AboutForm.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Release\WIDA.compilerForm.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Release\WIDA.createTaskForm.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Release\WIDA.definingDisplayForm.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Release\WIDA.definingForm.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Release\WIDA.mainForm.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Release\WIDA.Forms.optionsForm.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Release\WIDA.Forms.referencedAssembliesForm.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Release\WIDA.Properties.Resources.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Release\WIDA Tasks.exe
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Release\WIDA Tasks.pdb
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\bin\Release\Lzma#.dll

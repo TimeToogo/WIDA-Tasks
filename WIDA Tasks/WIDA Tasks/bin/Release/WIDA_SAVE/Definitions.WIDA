@@ -1,0 +1,3810 @@
+<Definitions><IsDefinitions>1</IsDefinitions><Trigger><Name>Every millisecond</Name><GroupName>Time</GroupName><Description>This will trigger the task every millisecond</Description><Active>0</Active><NeedsParams>0</NeedsParams><Source><Files><File><Name>Default.cs</Name><Code>using System;using System.Collections.Generic;using System.Text;using System.Windows.Forms;//Do not edit namespace or class namenamespace Code{    public class Trigger    {        Timer Timer = new Timer();        object[] Params = null;        //Call "TriggerDel.DynamicInvoke()" to trigger the task        Delegate TriggerDel = null;        public Trigger(Delegate Trigger, object[] Params)        {            this.TriggerDel = Trigger;            //These parameters will come from the form for this Trigger(Optional)            this.Params = Params;            this.Timer.Interval = 1;            this.Timer.Tick += new EventHandler(this.TriggerTask);            this.Timer.Start();        }        public void TriggerTask(object sender, EventArgs e)        {           TriggerDel.DynamicInvoke();        }    }}</Code><Critical>1</Critical></File></Files><ReferencedAssemeblies><ReferencedAssemebly>Microsoft.CSharp.dll</ReferencedAssemebly><ReferencedAssemebly>System.dll</ReferencedAssemebly><ReferencedAssemebly>System.Core.dll</ReferencedAssemebly><ReferencedAssemebly>System.Data.dll</ReferencedAssemebly><ReferencedAssemebly>System.Xml.dll</ReferencedAssemebly><ReferencedAssemebly>System.Windows.Forms.dll</ReferencedAssemebly><ReferencedAssemebly>System.Drawing.dll</ReferencedAssemebly></ReferencedAssemeblies></Source></Trigger><Trigger><Name>Every second</Name><GroupName>Time</GroupName><Description>This will trigger the task every second</Description><Active>0</Active><NeedsParams>0</NeedsParams><Source><Files><File><Name>Default.cs</Name><Code>using System;using System.Collections.Generic;using System.Text;using System.Windows.Forms;//Do not edit namespace or class namenamespace Code{    public class Trigger    {        Timer Timer = new Timer();        object[] Params = null;        //Call "TriggerDel.DynamicInvoke()" to trigger the task        Delegate TriggerDel = null;        public Trigger(Delegate Trigger, object[] Params)        {            this.TriggerDel = Trigger;            //These parameters will come from the form for this Trigger(Optional)            this.Params = Params;            this.Timer.Interval = 1000;            this.Timer.Tick += new EventHandler(this.TriggerTask);            this.Timer.Start();        }        public void TriggerTask(object sender, EventArgs e)        {           TriggerDel.DynamicInvoke();        }    }}</Code><Critical>1</Critical></File></Files><ReferencedAssemeblies><ReferencedAssemebly>Microsoft.CSharp.dll</ReferencedAssemebly><ReferencedAssemebly>System.dll</ReferencedAssemebly><ReferencedAssemebly>System.Core.dll</ReferencedAssemebly><ReferencedAssemebly>System.Data.dll</ReferencedAssemebly><ReferencedAssemebly>System.Xml.dll</ReferencedAssemebly><ReferencedAssemebly>System.Windows.Forms.dll</ReferencedAssemebly><ReferencedAssemebly>System.Drawing.dll</ReferencedAssemebly></ReferencedAssemeblies></Source></Trigger><Trigger><Name>Every minute</Name><GroupName>Time</GroupName><Description>This will trigger the task at the start of every minute</Description><Active>0</Active><NeedsParams>0</NeedsParams><Source><Files><File><Name>Default.cs</Name><Code>using System;using System.Collections.Generic;using System.Text;using System.Windows.Forms;//Do not edit namespace or class namenamespace Code{    public class Trigger    {        Timer Timer = new Timer();        object[] Params = null;        //Call "TriggerDel.DynamicInvoke()" to trigger the task        Delegate TriggerDel = null;        public Trigger(Delegate Trigger, object[] Params)        {            this.TriggerDel = Trigger;            //These parameters will come from the form for this Trigger(Optional)            this.Params = Params;            this.Timer.Interval = 1000;            this.Timer.Tick += new EventHandler(this.TriggerTask);            this.Timer.Start();        }        public void TriggerTask(object sender, EventArgs e)        {           if(DateTime.Now.Second == 0)               TriggerDel.DynamicInvoke();        }    }}</Code><Critical>1</Critical></File></Files><ReferencedAssemeblies><ReferencedAssemebly>Microsoft.CSharp.dll</ReferencedAssemebly><ReferencedAssemebly>System.dll</ReferencedAssemebly><ReferencedAssemebly>System.Core.dll</ReferencedAssemebly><ReferencedAssemebly>System.Data.dll</ReferencedAssemebly><ReferencedAssemebly>System.Xml.dll</ReferencedAssemebly><ReferencedAssemebly>System.Windows.Forms.dll</ReferencedAssemebly><ReferencedAssemebly>System.Drawing.dll</ReferencedAssemebly></ReferencedAssemeblies></Source></Trigger><Trigger><Name>Every hour</Name><GroupName>Time</GroupName><Description>This will trigger the task at the start of every hour</Description><Active>0</Active><NeedsParams>0</NeedsParams><Source><Files><File><Name>Default.cs</Name><Code>using System;using System.Collections.Generic;using System.Text;using System.Windows.Forms;//Do not edit namespace or class namenamespace Code{    public class Trigger    {        Timer Timer = new Timer();        object[] Params = null;        //Call "TriggerDel.DynamicInvoke()" to trigger the task        Delegate TriggerDel = null;        public Trigger(Delegate Trigger, object[] Params)        {            this.TriggerDel = Trigger;            //These parameters will come from the form for this Trigger(Optional)            this.Params = Params;            this.Timer.Interval = 1000;            this.Timer.Tick += new EventHandler(this.TriggerTask);            this.Timer.Start();        }        public void TriggerTask(object sender, EventArgs e)        {           if(DateTime.Now.Second == 0 &amp;&amp; DateTime.Now.Minute == 0)               TriggerDel.DynamicInvoke();        }    }}</Code><Critical>1</Critical></File></Files><ReferencedAssemeblies><ReferencedAssemebly>Microsoft.CSharp.dll</ReferencedAssemebly><ReferencedAssemebly>System.dll</ReferencedAssemebly><ReferencedAssemebly>System.Core.dll</ReferencedAssemebly><ReferencedAssemebly>System.Data.dll</ReferencedAssemebly><ReferencedAssemebly>System.Xml.dll</ReferencedAssemebly><ReferencedAssemebly>System.Windows.Forms.dll</ReferencedAssemebly><ReferencedAssemebly>System.Drawing.dll</ReferencedAssemebly></ReferencedAssemeblies></Source></Trigger><Trigger><Name>Every day</Name><GroupName>Time</GroupName><Description>This will trigger the task at the start of every day</Description><Active>0</Active><NeedsParams>0</NeedsParams><Source><Files><File><Name>Default.cs</Name><Code>using System;using System.Collections.Generic;using System.Text;using System.Windows.Forms;//Do not edit namespace or class namenamespace Code{    public class Trigger    {        Timer Timer = new Timer();        object[] Params = null;        //Call "TriggerDel.DynamicInvoke()" to trigger the task        Delegate TriggerDel = null;        public Trigger(Delegate Trigger, object[] Params)        {            this.TriggerDel = Trigger;            //These parameters will come from the form for this Trigger(Optional)            this.Params = Params;            this.Timer.Interval = 1000;            this.Timer.Tick += new EventHandler(this.TriggerTask);            this.Timer.Start();        }        public void TriggerTask(object sender, EventArgs e)        {           if(DateTime.Now.Second == 0 &amp;&amp; DateTime.Now.Minute == 0 &amp;&amp; DateTime.Now.Hour == 0)               TriggerDel.DynamicInvoke();        }    }}</Code><Critical>1</Critical></File></Files><ReferencedAssemeblies><ReferencedAssemebly>Microsoft.CSharp.dll</ReferencedAssemebly><ReferencedAssemebly>System.dll</ReferencedAssemebly><ReferencedAssemebly>System.Core.dll</ReferencedAssemebly><ReferencedAssemebly>System.Data.dll</ReferencedAssemebly><ReferencedAssemebly>System.Xml.dll</ReferencedAssemebly><ReferencedAssemebly>System.Windows.Forms.dll</ReferencedAssemebly><ReferencedAssemebly>System.Drawing.dll</ReferencedAssemebly></ReferencedAssemeblies></Source></Trigger><Trigger><Name>Every week</Name><GroupName>Time</GroupName><Description>This will trigger the task at the start of every week</Description><Active>0</Active><NeedsParams>0</NeedsParams><Source><Files><File><Name>Default.cs</Name><Code>using System;using System.Collections.Generic;using System.Text;using System.Windows.Forms;//Do not edit namespace or class namenamespace Code{    public class Trigger    {        Timer Timer = new Timer();        object[] Params = null;        //Call "TriggerDel.DynamicInvoke()" to trigger the task        Delegate TriggerDel = null;        public Trigger(Delegate Trigger, object[] Params)        {            this.TriggerDel = Trigger;            //These parameters will come from the form for this Trigger(Optional)            this.Params = Params;            this.Timer.Interval = 1000;            this.Timer.Tick += new EventHandler(this.TriggerTask);            this.Timer.Start();        }        public void TriggerTask(object sender, EventArgs e)        {           if(DateTime.Now.Second == 0 &amp;&amp; DateTime.Now.Minute == 0 &amp;&amp; DateTime.Now.Hour == 0 &amp;&amp; DateTime.Now.DayOfWeek == 0)               TriggerDel.DynamicInvoke();        }    }}</Code><Critical>1</Critical></File></Files><ReferencedAssemeblies><ReferencedAssemebly>Microsoft.CSharp.dll</ReferencedAssemebly><ReferencedAssemebly>System.dll</ReferencedAssemebly><ReferencedAssemebly>System.Core.dll</ReferencedAssemebly><ReferencedAssemebly>System.Data.dll</ReferencedAssemebly><ReferencedAssemebly>System.Xml.dll</ReferencedAssemebly><ReferencedAssemebly>System.Windows.Forms.dll</ReferencedAssemebly><ReferencedAssemebly>System.Drawing.dll</ReferencedAssemebly></ReferencedAssemeblies></Source></Trigger><Trigger><Name>At times</Name><GroupName>Time</GroupName><Description>This will trigger the task when the specified times are reached</Description><Active>0</Active><NeedsParams>1</NeedsParams><FormSource><Files><File><Name>Form.cs</Name><Code>using System;using System.Collections.Generic;using System.ComponentModel;using System.Data;using System.Drawing;using System.Linq;using System.Text;using System.Windows.Forms;namespace Form{    public partial class ParamsForm : System.Windows.Forms.Form    {        List&lt;DateTime&gt; Times = new List&lt;DateTime&gt;();        //This array with be passed to the linked trigger, condition or action        public object[] ReturnedParams;        //This array is from previously entered params (so the user can edit the params)(optional)        private object[] OriginalParams = null;        //This boolean must be set to true for the params to be accepted(to make sure bad params dont get sent)        public bool ParamsValid = false;        private System.Windows.Forms.Label timesLabel;        private System.Windows.Forms.Label dateLabel;        private System.Windows.Forms.DateTimePicker datePicker;        private System.Windows.Forms.Label timeLabel;        private System.Windows.Forms.DateTimePicker timePicker;        private System.Windows.Forms.Button addButton;        private System.Windows.Forms.ListBox timesListBox;        private System.Windows.Forms.Button doneButton;        private System.Windows.Forms.Button removeButton;        private System.Windows.Forms.Button clearButton;        public ParamsForm(object[] OriginalParams = null)        {            this.OriginalParams = OriginalParams;            this.timesLabel = new System.Windows.Forms.Label();            this.dateLabel = new System.Windows.Forms.Label();            this.datePicker = new System.Windows.Forms.DateTimePicker();            this.timeLabel = new System.Windows.Forms.Label();            this.timePicker = new System.Windows.Forms.DateTimePicker();            this.addButton = new System.Windows.Forms.Button();            this.timesListBox = new System.Windows.Forms.ListBox();            this.doneButton = new System.Windows.Forms.Button();            this.removeButton = new System.Windows.Forms.Button();            this.clearButton = new System.Windows.Forms.Button();            this.SuspendLayout();            //             // timesLabel            //             this.timesLabel.AutoSize = true;            this.timesLabel.Location = new System.Drawing.Point(9, 9);            this.timesLabel.Name = "timesLabel";            this.timesLabel.Size = new System.Drawing.Size(38, 13);            this.timesLabel.TabIndex = 0;            this.timesLabel.Text = "Times:";            //             // dateLabel            //             this.dateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));            this.dateLabel.AutoSize = true;            this.dateLabel.Location = new System.Drawing.Point(9, 208);            this.dateLabel.Name = "dateLabel";            this.dateLabel.Size = new System.Drawing.Size(33, 13);            this.dateLabel.TabIndex = 2;            this.dateLabel.Text = "Date:";            //             // datePicker            //             this.datePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)            | System.Windows.Forms.AnchorStyles.Right)));            this.datePicker.Location = new System.Drawing.Point(48, 204);            this.datePicker.Name = "datePicker";            this.datePicker.Size = new System.Drawing.Size(200, 20);            this.datePicker.TabIndex = 3;            //             // timeLabel            //             this.timeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));            this.timeLabel.AutoSize = true;            this.timeLabel.Location = new System.Drawing.Point(9, 236);            this.timeLabel.Name = "timeLabel";            this.timeLabel.Size = new System.Drawing.Size(33, 13);            this.timeLabel.TabIndex = 4;            this.timeLabel.Text = "Time:";            //             // timePicker            //             this.timePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)            | System.Windows.Forms.AnchorStyles.Right)));            this.timePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;            this.timePicker.Location = new System.Drawing.Point(48, 230);            this.timePicker.Name = "timePicker";            this.timePicker.ShowUpDown = true;            this.timePicker.Size = new System.Drawing.Size(200, 20);            this.timePicker.TabIndex = 5;            //             // addButton            //             this.addButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));            this.addButton.Location = new System.Drawing.Point(254, 204);            this.addButton.Name = "addButton";            this.addButton.Size = new System.Drawing.Size(39, 45);            this.addButton.TabIndex = 6;            this.addButton.Text = "Add";            this.addButton.UseVisualStyleBackColor = true;            this.addButton.Click += new System.EventHandler(this.addButton_Click);            //             // timesListBox            //             this.timesListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)            | System.Windows.Forms.AnchorStyles.Left)            | System.Windows.Forms.AnchorStyles.Right)));            this.timesListBox.FormattingEnabled = true;            this.timesListBox.IntegralHeight = false;            this.timesListBox.Location = new System.Drawing.Point(12, 25);            this.timesListBox.Name = "timesListBox";            this.timesListBox.Size = new System.Drawing.Size(281, 173);            this.timesListBox.TabIndex = 1;            //             // doneButton            //             this.doneButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)            | System.Windows.Forms.AnchorStyles.Right)));            this.doneButton.Location = new System.Drawing.Point(12, 256);            this.doneButton.Name = "doneButton";            this.doneButton.Size = new System.Drawing.Size(281, 23);            this.doneButton.TabIndex = 7;            this.doneButton.Text = "Done";            this.doneButton.UseVisualStyleBackColor = true;            this.doneButton.Click += new System.EventHandler(this.doneButton_Click);            //             // removeButton            //             this.removeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));            this.removeButton.Location = new System.Drawing.Point(234, 26);            this.removeButton.Name = "removeButton";            this.removeButton.Size = new System.Drawing.Size(58, 21);            this.removeButton.TabIndex = 8;            this.removeButton.Text = "Remove";            this.removeButton.UseVisualStyleBackColor = true;            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);            //             // clearButton            //             this.clearButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));            this.clearButton.Location = new System.Drawing.Point(193, 26);            this.clearButton.Name = "clearButton";            this.clearButton.Size = new System.Drawing.Size(42, 21);            this.clearButton.TabIndex = 9;            this.clearButton.Text = "Clear";            this.clearButton.UseVisualStyleBackColor = true;            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);            //             // ParamsForm            //             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;            this.ClientSize = new System.Drawing.Size(305, 291);            this.Controls.Add(this.clearButton);            this.Controls.Add(this.removeButton);            this.Controls.Add(this.doneButton);            this.Controls.Add(this.addButton);            this.Controls.Add(this.timePicker);            this.Controls.Add(this.timeLabel);            this.Controls.Add(this.datePicker);            this.Controls.Add(this.dateLabel);            this.Controls.Add(this.timesListBox);            this.Controls.Add(this.timesLabel);            this.Name = "ParamsForm";            this.Text = "Times Dialog";            this.ResumeLayout(false);            this.PerformLayout();        }        private void ParamsForm_Load(object sender, EventArgs e)        {            datePicker.MinDate = DateTime.Now;            timePicker.MinDate = DateTime.Now;            if(this.OriginalParams != null)                foreach (object TimeObj in this.OriginalParams)                {                    timesListBox.Items.Add(((DateTime)TimeObj).ToString());                    Times.Add((DateTime)TimeObj);                }        }        private void addButton_Click(object sender, EventArgs e)        {            DateTime Time = new DateTime(datePicker.Value.Year, datePicker.Value.Month, datePicker.Value.Day, timePicker.Value.Hour, timePicker.Value.Minute, timePicker.Value.Second);            timesListBox.Items.Add(Time.ToString());            Times.Add(Time);        }        private void removeButton_Click(object sender, EventArgs e)        {            if (timesListBox.SelectedIndex != -1)            {                int Index = timesListBox.SelectedIndex;                timesListBox.Items.RemoveAt(Index);                Times.RemoveAt(Index);            }            else                MessageBox.Show("Please select a time");        }        private void clearButton_Click(object sender, EventArgs e)        {            timesListBox.Items.Clear();            Times.Clear();        }        private void doneButton_Click(object sender, EventArgs e)        {            if (timesListBox.Items.Count == 0)            {                MessageBox.Show("Please add at least time");                return;            }            List&lt;object&gt; TimesObj = new List&lt;object&gt;();            foreach (DateTime Time in Times)            {                TimesObj.Add((object)Time);            }            ReturnedParams = TimesObj.ToArray();            ParamsValid = true;        }    }}</Code><Critical>1</Critical></File></Files><ReferencedAssemeblies><ReferencedAssemebly>Microsoft.CSharp.dll</ReferencedAssemebly><ReferencedAssemebly>System.dll</ReferencedAssemebly><ReferencedAssemebly>System.Core.dll</ReferencedAssemebly><ReferencedAssemebly>System.Data.dll</ReferencedAssemebly><ReferencedAssemebly>System.Xml.dll</ReferencedAssemebly><ReferencedAssemebly>System.Windows.Forms.dll</ReferencedAssemebly><ReferencedAssemebly>System.Drawing.dll</ReferencedAssemebly></ReferencedAssemeblies></FormSource><Source><Files><File><Name>Default.cs</Name><Code>using System;using System.Collections.Generic;using System.Text;using System.Windows.Forms;//Do not edit namespace or class namenamespace Code{    public class Trigger    {        Timer Timer = new Timer();        DateTime SpecifiedTime = new DateTime();        object[] Params = null;        //Call "TriggerDel.DynamicInvoke()" to trigger the task        Delegate TriggerDel = null;        public Trigger(Delegate Trigger, object[] Params)        {            this.TriggerDel = Trigger;            //These parameters will come from the form for this Trigger(Optional)            this.Params = Params;            this.SpecifiedTime = (DateTime)Params[0];            this.Timer.Interval = 1000;            this.Timer.Tick += new EventHandler(this.TriggerTask);            this.Timer.Start();        }        public void TriggerTask(object sender, EventArgs e)        {           if(DateTime.Now.Year == this.SpecifiedTime.Year &amp;&amp; DateTime.Now.Month == this.SpecifiedTime.Month &amp;&amp; DateTime.Now.Day == this.SpecifiedTime.Day &amp;&amp; DateTime.Now.Hour == this.SpecifiedTime.Hour &amp;&amp; DateTime.Now.Minute == this.SpecifiedTime.Minute &amp;&amp; DateTime.Now.Second == this.SpecifiedTime.Second)               TriggerDel.DynamicInvoke();        }    }}</Code><Critical>1</Critical></File></Files><ReferencedAssemeblies><ReferencedAssemebly>Microsoft.CSharp.dll</ReferencedAssemebly><ReferencedAssemebly>System.dll</ReferencedAssemebly><ReferencedAssemebly>System.Core.dll</ReferencedAssemebly><ReferencedAssemebly>System.Data.dll</ReferencedAssemebly><ReferencedAssemebly>System.Xml.dll</ReferencedAssemebly><ReferencedAssemebly>System.Windows.Forms.dll</ReferencedAssemebly><ReferencedAssemebly>System.Drawing.dll</ReferencedAssemebly></ReferencedAssemeblies></Source></Trigger><Trigger><Name>On key press</Name><GroupName>Key</GroupName><Description>When a specified key is pressed</Description><Active>0</Active><NeedsParams>1</NeedsParams><FormSource><Files /><ReferencedAssemeblies><ReferencedAssemebly>Microsoft.CSharp.dll</ReferencedAssemebly><ReferencedAssemebly>System.dll</ReferencedAssemebly><ReferencedAssemebly>System.Core.dll</ReferencedAssemebly><ReferencedAssemebly>System.Data.dll</ReferencedAssemebly><ReferencedAssemebly>System.Xml.dll</ReferencedAssemebly><ReferencedAssemebly>System.Windows.Forms.dll</ReferencedAssemebly><ReferencedAssemebly>System.Drawing.dll</ReferencedAssemebly></ReferencedAssemeblies></FormSource><Source><Files><File><Name>Default.cs</Name><Code>using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Windows.Forms;
+
+//Do not edit namespace or class name
+namespace Code
+{
+    public class Trigger
+    {
+        globalKeyboardHook Hook = new globalKeyboardHook();
+    	List&lt;List&lt;Keys&gt;&gt; KeyCombinations = new List&lt;List&lt;Keys&gt;&gt;();
+    	List&lt;Keys&gt; CurrentKeys = new List&lt;Keys&gt;();
+    	
+        public object[] Params = null;
+        
+        //Call "TriggerDel.DynamicInvoke()" to trigger the task
+        public Delegate TriggerDel = null;
+        
+        public Trigger(Delegate Trigger, object[] Params)
+        {
+            this.TriggerDel = Trigger;
+            //These parameters will come from the form for this Trigger(Optional)
+            this.Params = Params;
+            KeyCombinations = (List&lt;List&lt;Keys&gt;&gt;)Params[0];
+            KeyCombinations.ForEach(Keys =&gt; Hook.HookedKeys.AddRange(Keys));
+            
+            Hook.KeyDown += new KeyEventHandler(KeyDown);
+            Hook.KeyUp += new KeyEventHandler(KeyUp);
+        }
+        
+        void KeyDown(object sender, KeyEventArgs e)
+        {
+       	     if (!CurrentKeys.Contains(e.KeyCode))
+            {
+	    	 CurrentKeys.Add(e.KeyCode);
+	    	 KeysPressed();
+	     }
+	} 
+	
+	void KeyUp(object sender, KeyEventArgs e)
+        {
+	    CurrentKeys.Remove(e.KeyCode);
+	} 
+	
+	//Trigger if specfied keys are pressed
+	private void KeysPressed()
+	{
+		foreach(List&lt;Keys&gt; Keys in KeyCombinations)
+		{
+			if(CurrentKeys == Keys)
+			{
+				TriggerDel.DynamicInvoke();
+			}
+		}
+	}
+    }
+}
+</Code><Critical>1</Critical></File><File><Name>t.cs</Name><Code>using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
+
+namespace Code {
+	/// &lt;summary&gt;
+	/// A class that manages a global low level keyboard hook
+	/// &lt;/summary&gt;
+	class globalKeyboardHook {
+		#region Constant, Structure and Delegate Definitions
+		/// &lt;summary&gt;
+		/// defines the callback type for the hook
+		/// &lt;/summary&gt;
+		public delegate int keyboardHookProc(int code, int wParam, ref keyboardHookStruct lParam);
+
+		public struct keyboardHookStruct {
+			public int vkCode;
+			public int scanCode;
+			public int flags;
+			public int time;
+			public int dwExtraInfo;
+		}
+
+		const int WH_KEYBOARD_LL = 13;
+		const int WM_KEYDOWN = 0x100;
+		const int WM_KEYUP = 0x101;
+		const int WM_SYSKEYDOWN = 0x104;
+		const int WM_SYSKEYUP = 0x105;
+		#endregion
+
+		#region Instance Variables
+		/// &lt;summary&gt;
+		/// The collections of keys to watch for
+		/// &lt;/summary&gt;
+		public List&lt;Keys&gt; HookedKeys = new List&lt;Keys&gt;();
+		/// &lt;summary&gt;
+		/// Handle to the hook, need this to unhook and call the next hook
+		/// &lt;/summary&gt;
+		IntPtr hhook = IntPtr.Zero;
+		#endregion
+
+		#region Events
+		/// &lt;summary&gt;
+		/// Occurs when one of the hooked keys is pressed
+		/// &lt;/summary&gt;
+		public event KeyEventHandler KeyDown;
+		/// &lt;summary&gt;
+		/// Occurs when one of the hooked keys is released
+		/// &lt;/summary&gt;
+		public event KeyEventHandler KeyUp;
+		#endregion
+
+		#region Constructors and Destructors
+		/// &lt;summary&gt;
+		/// Initializes a new instance of the &lt;see cref="globalKeyboardHook"/&gt; class and installs the keyboard hook.
+		/// &lt;/summary&gt;
+		public globalKeyboardHook() {
+			hook();
+		}
+
+		/// &lt;summary&gt;
+		/// Releases unmanaged resources and performs other cleanup operations before the
+		/// &lt;see cref="globalKeyboardHook"/&gt; is reclaimed by garbage collection and uninstalls the keyboard hook.
+		/// &lt;/summary&gt;
+		~globalKeyboardHook() {
+			unhook();
+		}
+		#endregion
+
+		#region Public Methods
+		/// &lt;summary&gt;
+		/// Installs the global hook
+		/// &lt;/summary&gt;
+		public void hook() {
+			IntPtr hInstance = LoadLibrary("User32");
+			hhook = SetWindowsHookEx(WH_KEYBOARD_LL, hookProc, hInstance, 0);
+		}
+
+		/// &lt;summary&gt;
+		/// Uninstalls the global hook
+		/// &lt;/summary&gt;
+		public void unhook() {
+			UnhookWindowsHookEx(hhook);
+		}
+
+		/// &lt;summary&gt;
+		/// The callback for the keyboard hook
+		/// &lt;/summary&gt;
+		/// &lt;param name="code"&gt;The hook code, if it isn't &gt;= 0, the function shouldn't do anyting&lt;/param&gt;
+		/// &lt;param name="wParam"&gt;The event type&lt;/param&gt;
+		/// &lt;param name="lParam"&gt;The keyhook event information&lt;/param&gt;
+		/// &lt;returns&gt;&lt;/returns&gt;
+		public int hookProc(int code, int wParam, ref keyboardHookStruct lParam) {
+			if (code &gt;= 0) {
+				Keys key = (Keys)lParam.vkCode;
+				if (HookedKeys.Contains(key)) {
+					KeyEventArgs kea = new KeyEventArgs(key);
+					if ((wParam == WM_KEYDOWN || wParam == WM_SYSKEYDOWN) &amp;&amp; (KeyDown != null)) {
+						KeyDown(this, kea) ;
+					} else if ((wParam == WM_KEYUP || wParam == WM_SYSKEYUP) &amp;&amp; (KeyUp != null)) {
+						KeyUp(this, kea);
+					}
+					if (kea.Handled)
+						return 1;
+				}
+			}
+			return CallNextHookEx(hhook, code, wParam, ref lParam);
+		}
+		#endregion
+
+		#region DLL imports
+		/// &lt;summary&gt;
+		/// Sets the windows hook, do the desired event, one of hInstance or threadId must be non-null
+		/// &lt;/summary&gt;
+		/// &lt;param name="idHook"&gt;The id of the event you want to hook&lt;/param&gt;
+		/// &lt;param name="callback"&gt;The callback.&lt;/param&gt;
+		/// &lt;param name="hInstance"&gt;The handle you want to attach the event to, can be null&lt;/param&gt;
+		/// &lt;param name="threadId"&gt;The thread you want to attach the event to, can be null&lt;/param&gt;
+		/// &lt;returns&gt;a handle to the desired hook&lt;/returns&gt;
+		[DllImport("user32.dll")]
+		static extern IntPtr SetWindowsHookEx(int idHook, keyboardHookProc callback, IntPtr hInstance, uint threadId);
+
+		/// &lt;summary&gt;
+		/// Unhooks the windows hook.
+		/// &lt;/summary&gt;
+		/// &lt;param name="hInstance"&gt;The hook handle that was returned from SetWindowsHookEx&lt;/param&gt;
+		/// &lt;returns&gt;True if successful, false otherwise&lt;/returns&gt;
+		[DllImport("user32.dll")]
+		static extern bool UnhookWindowsHookEx(IntPtr hInstance);
+
+		/// &lt;summary&gt;
+		/// Calls the next hook.
+		/// &lt;/summary&gt;
+		/// &lt;param name="idHook"&gt;The hook id&lt;/param&gt;
+		/// &lt;param name="nCode"&gt;The hook code&lt;/param&gt;
+		/// &lt;param name="wParam"&gt;The wparam.&lt;/param&gt;
+		/// &lt;param name="lParam"&gt;The lparam.&lt;/param&gt;
+		/// &lt;returns&gt;&lt;/returns&gt;
+		[DllImport("user32.dll")]
+		static extern int CallNextHookEx(IntPtr idHook, int nCode, int wParam, ref keyboardHookStruct lParam);
+
+		/// &lt;summary&gt;
+		/// Loads the library.
+		/// &lt;/summary&gt;
+		/// &lt;param name="lpFileName"&gt;Name of the library&lt;/param&gt;
+		/// &lt;returns&gt;A handle to the library&lt;/returns&gt;
+		[DllImport("kernel32.dll")]
+		static extern IntPtr LoadLibrary(string lpFileName);
+		#endregion
+	}
+}
+</Code><Critical>1</Critical></File></Files><ReferencedAssemeblies><ReferencedAssemebly>Microsoft.CSharp.dll</ReferencedAssemebly><ReferencedAssemebly>System.dll</ReferencedAssemebly><ReferencedAssemebly>System.Core.dll</ReferencedAssemebly><ReferencedAssemebly>System.Data.dll</ReferencedAssemebly><ReferencedAssemebly>System.Xml.dll</ReferencedAssemebly><ReferencedAssemebly>System.Windows.Forms.dll</ReferencedAssemebly><ReferencedAssemebly>System.Drawing.dll</ReferencedAssemebly></ReferencedAssemeblies></Source></Trigger><Trigger><Name>On key press</Name><GroupName>Keyboard</GroupName><Description>When a specified key is pressed</Description><Active>0</Active><NeedsParams>1</NeedsParams><FormSource><Files><File><Name>Form.cs</Name><Code>using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using Gma.UserActivityMonitor;
+
+namespace Form
+{
+    //This form with be shown to the user to get the needed params
+    public partial class ParamsForm : System.Windows.Forms.Form
+    {
+ 	List&lt;List&lt;Keys&gt;&gt; Keys = new List&lt;List&lt;Keys&gt;&gt;();
+        List&lt;Keys&gt; CurrentKeys = new List&lt;Keys&gt;();
+        //This array with be passed to the linked trigger, condition or action
+        public object[] ReturnedParams;
+   
+        //This array is from previously entered params (so the user can edit the params)(optional)
+        public object[] OriginalParams = null;
+
+        //This boolean must be set to true for the params to be accepted(to make sure bad params dont get sent)
+        public bool ParamsValid = false;
+
+        public ParamsForm(object[] OriginalParams = null)
+        {
+		this.OriginalParams = OriginalParams;
+        	InitializeComponent();
+        }
+
+        private void ParamsForm_Load(object sender, EventArgs e)
+        {
+		if(this.OriginalParams != null)
+		{
+		     Keys = (List&lt;List&lt;Keys&gt;&gt;)this.OriginalParams[0];
+		     foreach(List&lt;Keys&gt; SingleKeys in this.Keys)
+		     {
+                    	  keysListBox.Items.Add(KeysToString(SingleKeys));
+                    }
+                }
+		keyTextBox.Focus();
+		HookManager.KeyDown += new KeyEventHandler(KeyDown);
+        }
+        
+        private void KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!CurrentKeys.Contains(e.KeyCode) &amp;&amp; keyTextBox.Focused)
+            {
+                CurrentKeys.Add(e.KeyCode);
+                keyTextBox.Text = KeysToString(CurrentKeys);
+            }
+        }
+        
+        private void keyTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+            e.Handled = true;
+        }
+
+        private void keyTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            keyTextBox.Text = string.Empty;
+            CurrentKeys.Clear();
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentKeys.Count &gt; 0)
+            {
+                keysListBox.Items.Add(KeysToString(CurrentKeys));
+                List&lt;Keys&gt; TempKeys = new  List&lt;Keys&gt;();
+                CurrentKeys.ForEach(Key =&gt; TempKeys.Add(Key));
+                Keys.Add(TempKeys.ToArray().ToList());
+                keyTextBox.Text = string.Empty;
+                CurrentKeys.Clear();
+            }
+            else
+                MessageBox.Show("Please input at least one key");
+        }
+
+        private void removeButton_Click(object sender, EventArgs e)
+        {
+            if (keysListBox.SelectedIndex != -1)
+            {
+                Keys.RemoveAt(keysListBox.SelectedIndex);
+                keysListBox.Items.Remove(keysListBox.SelectedItem);
+            }
+            else
+                MessageBox.Show("Please select a key");
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            keysListBox.Items.Clear();
+            Keys.Clear();
+        }
+
+        private void doneButton_Click(object sender, EventArgs e)
+        {
+            if (keysListBox.Items.Count == 0)
+            {
+                MessageBox.Show("Please add at least one key");
+                return;
+            }
+            List&lt;object&gt; KeysObj = new List&lt;object&gt;();
+            KeysObj.Add(Keys);
+            ReturnedParams = KeysObj.ToArray();
+            ParamsValid = true;
+            HookManager.KeyDown -= KeyDown;
+            this.Close();
+        }
+
+        public string KeysToString(List&lt;Keys&gt; Keys)
+        {
+            if (Keys.Count == 0)
+                return string.Empty;
+            string String = string.Empty;
+            Keys.ForEach(Key =&gt; String += " + " + Key.ToString());
+            String = String.Substring(3);
+            return String;
+        }
+    }
+}
+</Code><Critical>1</Critical></File><File><Name>Designer.cs</Name><Code>using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace Form
+{
+    partial class ParamsForm
+    {
+        /// &lt;summary&gt;
+        /// Required designer variable.
+        /// &lt;/summary&gt;
+        private System.ComponentModel.IContainer components = null;
+
+        /// &lt;summary&gt;
+        /// Clean up any resources being used.
+        /// &lt;/summary&gt;
+        /// &lt;param name="disposing"&gt;true if managed resources should be disposed; otherwise, false.&lt;/param&gt;
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing &amp;&amp; (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// &lt;summary&gt;
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// &lt;/summary&gt;
+
+        private System.Windows.Forms.Label keysLabel;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.ListBox keysListBox;
+        private System.Windows.Forms.Button doneButton;
+        private System.Windows.Forms.Button removeButton;
+        private System.Windows.Forms.Button clearButton;
+        private void InitializeComponent()
+        {
+            this.keysLabel = new System.Windows.Forms.Label();
+            this.addButton = new System.Windows.Forms.Button();
+            this.keysListBox = new System.Windows.Forms.ListBox();
+            this.doneButton = new System.Windows.Forms.Button();
+            this.removeButton = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.keyTextBox = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // keysLabel
+            // 
+            this.keysLabel.AutoEllipsis = true;
+            this.keysLabel.AutoSize = true;
+            this.keysLabel.Location = new System.Drawing.Point(9, 9);
+            this.keysLabel.Name = "keysLabel";
+            this.keysLabel.Size = new System.Drawing.Size(33, 13);
+            this.keysLabel.TabIndex = 0;
+            this.keysLabel.Text = "Keys:";
+            // 
+            // addButton
+            // 
+            this.addButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.addButton.Location = new System.Drawing.Point(254, 230);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(39, 20);
+            this.addButton.TabIndex = 6;
+            this.addButton.Text = "Add";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // keysListBox
+            // 
+            this.keysListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.keysListBox.FormattingEnabled = true;
+            this.keysListBox.IntegralHeight = false;
+            this.keysListBox.Location = new System.Drawing.Point(12, 25);
+            this.keysListBox.Name = "keysListBox";
+            this.keysListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.keysListBox.Size = new System.Drawing.Size(281, 199);
+            this.keysListBox.TabIndex = 1;
+            // 
+            // doneButton
+            // 
+            this.doneButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.doneButton.Location = new System.Drawing.Point(12, 256);
+            this.doneButton.Name = "doneButton";
+            this.doneButton.Size = new System.Drawing.Size(281, 23);
+            this.doneButton.TabIndex = 7;
+            this.doneButton.Text = "Done";
+            this.doneButton.UseVisualStyleBackColor = true;
+            this.doneButton.Click += new System.EventHandler(this.doneButton_Click);
+            // 
+            // removeButton
+            // 
+            this.removeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.removeButton.Location = new System.Drawing.Point(234, 26);
+            this.removeButton.Name = "removeButton";
+            this.removeButton.Size = new System.Drawing.Size(58, 21);
+            this.removeButton.TabIndex = 8;
+            this.removeButton.Text = "Remove";
+            this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
+            // 
+            // clearButton
+            // 
+            this.clearButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearButton.Location = new System.Drawing.Point(193, 26);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(42, 21);
+            this.clearButton.TabIndex = 9;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
+            // keyTextBox
+            // 
+            this.keyTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.keyTextBox.Location = new System.Drawing.Point(12, 230);
+            this.keyTextBox.Name = "keyTextBox";
+            this.keyTextBox.Size = new System.Drawing.Size(236, 20);
+            this.keyTextBox.TabIndex = 10;
+            this.keyTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.keyTextBox_MouseClick);
+            this.keyTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyTextBox_KeyDown);
+            // 
+            // ParamsForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(305, 291);
+            this.Controls.Add(this.keyTextBox);
+            this.Controls.Add(this.clearButton);
+            this.Controls.Add(this.removeButton);
+            this.Controls.Add(this.doneButton);
+            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.keysListBox);
+            this.Controls.Add(this.keysLabel);
+            this.Name = "ParamsForm";
+            this.Text = "Specify Keys:";
+            this.Load += new System.EventHandler(this.ParamsForm_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TextBox keyTextBox;
+
+
+    }
+}
+</Code><Critical>1</Critical></File><File><Name>GlobalEventProvider.cs</Name><Code>using System;
+using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace Gma.UserActivityMonitor
+{
+    /// &lt;summary&gt;
+    /// This component monitors all mouse activities globally (also outside of the application) 
+    /// and provides appropriate events.
+    /// &lt;/summary&gt;
+    public class GlobalEventProvider : Component
+    {
+        /// &lt;summary&gt;
+        /// This component raises events. The value is always true.
+        /// &lt;/summary&gt;
+        protected override bool CanRaiseEvents
+        {
+            get
+            {
+                return true;
+            }
+        }
+
+        //################################################################
+        #region Mouse events
+
+        private event MouseEventHandler m_MouseMove;
+
+        /// &lt;summary&gt;
+        /// Occurs when the mouse pointer is moved. 
+        /// &lt;/summary&gt;
+        public event MouseEventHandler MouseMove
+        {
+            add
+            {
+                if (m_MouseMove == null)
+                {
+                    HookManager.MouseMove += HookManager_MouseMove;
+                }
+                m_MouseMove += value;
+            }
+
+            remove
+            {
+                m_MouseMove -= value;
+                if (m_MouseMove == null)
+                {
+                    HookManager.MouseMove -= HookManager_MouseMove;
+                }
+            }
+        }
+
+        void HookManager_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m_MouseMove != null)
+            {
+                m_MouseMove.Invoke(this, e);
+            }
+        }
+
+        private event MouseEventHandler m_MouseClick;
+        /// &lt;summary&gt;
+        /// Occurs when a click was performed by the mouse. 
+        /// &lt;/summary&gt;
+        public event MouseEventHandler MouseClick
+        {
+            add
+            {
+                if (m_MouseClick == null)
+                {
+                    HookManager.MouseClick += HookManager_MouseClick;
+                }
+                m_MouseClick += value;
+            }
+
+            remove
+            {
+                m_MouseClick -= value;
+                if (m_MouseClick == null)
+                {
+                    HookManager.MouseClick -= HookManager_MouseClick;
+                }
+            }
+        }
+
+        void HookManager_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (m_MouseClick != null)
+            {
+                m_MouseClick.Invoke(this, e);
+            }
+        }
+
+        private event MouseEventHandler m_MouseDown;
+
+        /// &lt;summary&gt;
+        /// Occurs when the mouse a mouse button is pressed. 
+        /// &lt;/summary&gt;
+        public event MouseEventHandler MouseDown
+        {
+            add
+            {
+                if (m_MouseDown == null)
+                {
+                    HookManager.MouseDown += HookManager_MouseDown;
+                }
+                m_MouseDown += value;
+            }
+
+            remove
+            {
+                m_MouseDown -= value;
+                if (m_MouseDown == null)
+                {
+                    HookManager.MouseDown -= HookManager_MouseDown;
+                }
+            }
+        }
+
+        void HookManager_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (m_MouseDown != null)
+            {
+                m_MouseDown.Invoke(this, e);
+            }
+        }
+
+
+        private event MouseEventHandler m_MouseUp;
+
+        /// &lt;summary&gt;
+        /// Occurs when a mouse button is released. 
+        /// &lt;/summary&gt;
+        public event MouseEventHandler MouseUp
+        {
+            add
+            {
+                if (m_MouseUp == null)
+                {
+                    HookManager.MouseUp += HookManager_MouseUp;
+                }
+                m_MouseUp += value;
+            }
+
+            remove
+            {
+                m_MouseUp -= value;
+                if (m_MouseUp == null)
+                {
+                    HookManager.MouseUp -= HookManager_MouseUp;
+                }
+            }
+        }
+
+        void HookManager_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (m_MouseUp != null)
+            {
+                m_MouseUp.Invoke(this, e);
+            }
+        }
+
+        private event MouseEventHandler m_MouseDoubleClick;
+
+        /// &lt;summary&gt;
+        /// Occurs when a double clicked was performed by the mouse. 
+        /// &lt;/summary&gt;
+        public event MouseEventHandler MouseDoubleClick
+        {
+            add
+            {
+                if (m_MouseDoubleClick == null)
+                {
+                    HookManager.MouseDoubleClick += HookManager_MouseDoubleClick;
+                }
+                m_MouseDoubleClick += value;
+            }
+
+            remove
+            {
+                m_MouseDoubleClick -= value;
+                if (m_MouseDoubleClick == null)
+                {
+                    HookManager.MouseDoubleClick -= HookManager_MouseDoubleClick;
+                }
+            }
+        }
+
+        void HookManager_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (m_MouseDoubleClick != null)
+            {
+                m_MouseDoubleClick.Invoke(this, e);
+            }
+        }
+
+
+        private event EventHandler&lt;MouseEventExtArgs&gt; m_MouseMoveExt;
+
+        /// &lt;summary&gt;
+        /// Occurs when the mouse pointer is moved. 
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// This event provides extended arguments of type &lt;see cref="MouseEventArgs"/&gt; enabling you to 
+        /// supress further processing of mouse movement in other applications.
+        /// &lt;/remarks&gt;
+        public event EventHandler&lt;MouseEventExtArgs&gt; MouseMoveExt
+        {
+            add
+            {
+                if (m_MouseMoveExt == null)
+                {
+                    HookManager.MouseMoveExt += HookManager_MouseMoveExt;
+                }
+                m_MouseMoveExt += value;
+            }
+
+            remove
+            {
+                m_MouseMoveExt -= value;
+                if (m_MouseMoveExt == null)
+                {
+                    HookManager.MouseMoveExt -= HookManager_MouseMoveExt;
+                }
+            }
+        }
+
+        void HookManager_MouseMoveExt(object sender, MouseEventExtArgs e)
+        {
+            if (m_MouseMoveExt != null)
+            {
+                m_MouseMoveExt.Invoke(this, e);
+            }
+        }
+
+        private event EventHandler&lt;MouseEventExtArgs&gt; m_MouseClickExt;
+
+        /// &lt;summary&gt;
+        /// Occurs when a click was performed by the mouse. 
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// This event provides extended arguments of type &lt;see cref="MouseEventArgs"/&gt; enabling you to 
+        /// supress further processing of mouse click in other applications.
+        /// &lt;/remarks&gt;
+        public event EventHandler&lt;MouseEventExtArgs&gt; MouseClickExt
+        {
+            add
+            {
+                if (m_MouseClickExt == null)
+                {
+                    HookManager.MouseClickExt += HookManager_MouseClickExt;
+                }
+                m_MouseClickExt += value;
+            }
+
+            remove
+            {
+                m_MouseClickExt -= value;
+                if (m_MouseClickExt == null)
+                {
+                    HookManager.MouseClickExt -= HookManager_MouseClickExt;
+                }
+            }
+        }
+
+        void HookManager_MouseClickExt(object sender, MouseEventExtArgs e)
+        {
+            if (m_MouseClickExt != null)
+            {
+                m_MouseClickExt.Invoke(this, e);
+            }
+        }
+
+
+        #endregion
+
+        //################################################################
+        #region Keyboard events
+
+        private event KeyPressEventHandler m_KeyPress;
+
+        /// &lt;summary&gt;
+        /// Occurs when a key is pressed.
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// Key events occur in the following order: 
+        /// &lt;list type="number"&gt;
+        /// &lt;item&gt;KeyDown&lt;/item&gt;
+        /// &lt;item&gt;KeyPress&lt;/item&gt;
+        /// &lt;item&gt;KeyUp&lt;/item&gt;
+        /// &lt;/list&gt;
+        ///The KeyPress event is not raised by noncharacter keys; however, the noncharacter keys do raise the KeyDown and KeyUp events. 
+        ///Use the KeyChar property to sample keystrokes at run time and to consume or modify a subset of common keystrokes. 
+        ///To handle keyboard events only in your application and not enable other applications to receive keyboard events, 
+        /// set the KeyPressEventArgs.Handled property in your form's KeyPress event-handling method to &lt;b&gt;true&lt;/b&gt;. 
+        /// &lt;/remarks&gt;
+        public event KeyPressEventHandler KeyPress
+        {
+            add
+            {
+                if (m_KeyPress==null)
+                {
+                    HookManager.KeyPress +=HookManager_KeyPress;
+                }
+                m_KeyPress += value;
+            }
+            remove
+            {
+                m_KeyPress -= value;
+                if (m_KeyPress == null)
+                {
+                    HookManager.KeyPress -= HookManager_KeyPress;
+                }
+            }
+        }
+
+        void HookManager_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (m_KeyPress != null)
+            {
+                m_KeyPress.Invoke(this, e);
+            }
+        }
+
+        private event KeyEventHandler m_KeyUp;
+
+        /// &lt;summary&gt;
+        /// Occurs when a key is released. 
+        /// &lt;/summary&gt;
+        public event KeyEventHandler KeyUp
+        {
+            add
+            {
+                if (m_KeyUp == null)
+                {
+                    HookManager.KeyUp += HookManager_KeyUp;
+                }
+                m_KeyUp += value;
+            }
+            remove
+            {
+                m_KeyUp -= value;
+                if (m_KeyUp == null)
+                {
+                    HookManager.KeyUp -= HookManager_KeyUp;
+                }
+            }
+        }
+
+        private void HookManager_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (m_KeyUp != null)
+            {
+                m_KeyUp.Invoke(this, e);
+            }
+        }
+
+        private event KeyEventHandler m_KeyDown;
+
+        /// &lt;summary&gt;
+        /// Occurs when a key is preseed. 
+        /// &lt;/summary&gt;
+        public event KeyEventHandler KeyDown
+        {
+            add
+            {
+                if (m_KeyDown == null)
+                {
+                    HookManager.KeyDown += HookManager_KeyDown;
+                }
+                m_KeyDown += value;
+            }
+            remove
+            {
+                m_KeyDown -= value;
+                if (m_KeyDown == null)
+                {
+                    HookManager.KeyDown -= HookManager_KeyDown;
+                }
+            }
+        }
+
+        private void HookManager_KeyDown(object sender, KeyEventArgs e)
+        {
+            m_KeyDown.Invoke(this, e);
+        }
+
+        #endregion
+
+        
+    }
+}
+</Code><Critical>1</Critical></File><File><Name>HookManager.Callbacks.cs</Name><Code>using System;
+using System.ComponentModel;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
+
+namespace Gma.UserActivityMonitor
+{
+    public static partial class HookManager
+    {
+        /// &lt;summary&gt;
+        /// The CallWndProc hook procedure is an application-defined or library-defined callback 
+        /// function used with the SetWindowsHookEx function. The HOOKPROC type defines a pointer 
+        /// to this callback function. CallWndProc is a placeholder for the application-defined 
+        /// or library-defined function name.
+        /// &lt;/summary&gt;
+        /// &lt;param name="nCode"&gt;
+        /// [in] Specifies whether the hook procedure must process the message. 
+        /// If nCode is HC_ACTION, the hook procedure must process the message. 
+        /// If nCode is less than zero, the hook procedure must pass the message to the 
+        /// CallNextHookEx function without further processing and must return the 
+        /// value returned by CallNextHookEx.
+        /// &lt;/param&gt;
+        /// &lt;param name="wParam"&gt;
+        /// [in] Specifies whether the message was sent by the current thread. 
+        /// If the message was sent by the current thread, it is nonzero; otherwise, it is zero. 
+        /// &lt;/param&gt;
+        /// &lt;param name="lParam"&gt;
+        /// [in] Pointer to a CWPSTRUCT structure that contains details about the message. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// If nCode is less than zero, the hook procedure must return the value returned by CallNextHookEx. 
+        /// If nCode is greater than or equal to zero, it is highly recommended that you call CallNextHookEx 
+        /// and return the value it returns; otherwise, other applications that have installed WH_CALLWNDPROC 
+        /// hooks will not receive hook notifications and may behave incorrectly as a result. If the hook 
+        /// procedure does not call CallNextHookEx, the return value should be zero. 
+        /// &lt;/returns&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/windowing/hooks/hookreference/hookfunctions/callwndproc.asp
+        /// &lt;/remarks&gt;
+        private delegate int HookProc(int nCode, int wParam, IntPtr lParam);
+
+        //##############################################################################
+        #region Mouse hook processing
+
+        /// &lt;summary&gt;
+        /// This field is not objectively needed but we need to keep a reference on a delegate which will be 
+        /// passed to unmanaged code. To avoid GC to clean it up.
+        /// When passing delegates to unmanaged code, they must be kept alive by the managed application 
+        /// until it is guaranteed that they will never be called.
+        /// &lt;/summary&gt;
+        private static HookProc s_MouseDelegate;
+
+        /// &lt;summary&gt;
+        /// Stores the handle to the mouse hook procedure.
+        /// &lt;/summary&gt;
+        private static int s_MouseHookHandle;
+
+        private static int m_OldX;
+        private static int m_OldY;
+
+        /// &lt;summary&gt;
+        /// A callback function which will be called every Time a mouse activity detected.
+        /// &lt;/summary&gt;
+        /// &lt;param name="nCode"&gt;
+        /// [in] Specifies whether the hook procedure must process the message. 
+        /// If nCode is HC_ACTION, the hook procedure must process the message. 
+        /// If nCode is less than zero, the hook procedure must pass the message to the 
+        /// CallNextHookEx function without further processing and must return the 
+        /// value returned by CallNextHookEx.
+        /// &lt;/param&gt;
+        /// &lt;param name="wParam"&gt;
+        /// [in] Specifies whether the message was sent by the current thread. 
+        /// If the message was sent by the current thread, it is nonzero; otherwise, it is zero. 
+        /// &lt;/param&gt;
+        /// &lt;param name="lParam"&gt;
+        /// [in] Pointer to a CWPSTRUCT structure that contains details about the message. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// If nCode is less than zero, the hook procedure must return the value returned by CallNextHookEx. 
+        /// If nCode is greater than or equal to zero, it is highly recommended that you call CallNextHookEx 
+        /// and return the value it returns; otherwise, other applications that have installed WH_CALLWNDPROC 
+        /// hooks will not receive hook notifications and may behave incorrectly as a result. If the hook 
+        /// procedure does not call CallNextHookEx, the return value should be zero. 
+        /// &lt;/returns&gt;
+        private static int MouseHookProc(int nCode, int wParam, IntPtr lParam)
+        {
+            if (nCode &gt;= 0)
+            {
+                //Marshall the data from callback.
+                MouseLLHookStruct mouseHookStruct = (MouseLLHookStruct)Marshal.PtrToStructure(lParam, typeof(MouseLLHookStruct));
+
+                //detect button clicked
+                MouseButtons button = MouseButtons.None;
+                short mouseDelta = 0;
+                int clickCount = 0;
+                bool mouseDown = false;
+                bool mouseUp = false;
+
+                switch (wParam)
+                {
+                    case WM_LBUTTONDOWN:
+                        mouseDown = true;
+                        button = MouseButtons.Left;
+                        clickCount = 1;
+                        break;
+                    case WM_LBUTTONUP:
+                        mouseUp = true;
+                        button = MouseButtons.Left;
+                        clickCount = 1;
+                        break;
+                    case WM_LBUTTONDBLCLK: 
+                        button = MouseButtons.Left;
+                        clickCount = 2;
+                        break;
+                    case WM_RBUTTONDOWN:
+                        mouseDown = true;
+                        button = MouseButtons.Right;
+                        clickCount = 1;
+                        break;
+                    case WM_RBUTTONUP:
+                        mouseUp = true;
+                        button = MouseButtons.Right;
+                        clickCount = 1;
+                        break;
+                    case WM_RBUTTONDBLCLK: 
+                        button = MouseButtons.Right;
+                        clickCount = 2;
+                        break;
+                    case WM_MOUSEWHEEL:
+                        //If the message is WM_MOUSEWHEEL, the high-order word of MouseData member is the wheel delta. 
+                        //One wheel click is defined as WHEEL_DELTA, which is 120. 
+                        //(value &gt;&gt; 16) &amp; 0xffff; retrieves the high-order word from the given 32-bit value
+                        mouseDelta = (short)((mouseHookStruct.MouseData &gt;&gt; 16) &amp; 0xffff);
+                       
+                    //TODO: X BUTTONS (I havent them so was unable to test)
+                        //If the message is WM_XBUTTONDOWN, WM_XBUTTONUP, WM_XBUTTONDBLCLK, WM_NCXBUTTONDOWN, WM_NCXBUTTONUP, 
+                        //or WM_NCXBUTTONDBLCLK, the high-order word specifies which X button was pressed or released, 
+                        //and the low-order word is reserved. This value can be one or more of the following values. 
+                        //Otherwise, MouseData is not used. 
+                        break;
+                }
+
+                //generate event 
+                MouseEventExtArgs e = new MouseEventExtArgs(
+                                                   button,
+                                                   clickCount,
+                                                   mouseHookStruct.Point.X,
+                                                   mouseHookStruct.Point.Y,
+                                                   mouseDelta);
+
+                //Mouse up
+                if (s_MouseUp!=null &amp;&amp; mouseUp)
+                {
+                    s_MouseUp.Invoke(null, e);
+                }
+
+                //Mouse down
+                if (s_MouseDown != null &amp;&amp; mouseDown)
+                {
+                    s_MouseDown.Invoke(null, e);
+                }
+
+                //If someone listens to click and a click is heppened
+                if (s_MouseClick != null &amp;&amp; clickCount&gt;0)
+                {
+                    s_MouseClick.Invoke(null, e);
+                }
+
+                //If someone listens to click and a click is heppened
+                if (s_MouseClickExt != null &amp;&amp; clickCount &gt; 0)
+                {
+                    s_MouseClickExt.Invoke(null, e);
+                }
+
+                //If someone listens to double click and a click is heppened
+                if (s_MouseDoubleClick != null &amp;&amp; clickCount == 2)
+                {
+                    s_MouseDoubleClick.Invoke(null, e);
+                }
+
+                //Wheel was moved
+                if (s_MouseWheel!=null &amp;&amp; mouseDelta!=0)
+                {
+                    s_MouseWheel.Invoke(null, e);
+                }
+
+                //If someone listens to move and there was a change in coordinates raise move event
+                if ((s_MouseMove!=null || s_MouseMoveExt!=null) &amp;&amp; (m_OldX != mouseHookStruct.Point.X || m_OldY != mouseHookStruct.Point.Y))
+                {
+                    m_OldX = mouseHookStruct.Point.X;
+                    m_OldY = mouseHookStruct.Point.Y;
+                    if (s_MouseMove != null)
+                    {
+                        s_MouseMove.Invoke(null, e);
+                    }
+
+                    if (s_MouseMoveExt != null)
+                    {
+                        s_MouseMoveExt.Invoke(null, e);
+                    }
+                }
+
+                if (e.Handled)
+                {
+                    return -1;
+                }
+            }
+
+            //call next hook
+            return CallNextHookEx(s_MouseHookHandle, nCode, wParam, lParam);
+        }
+
+        private static void EnsureSubscribedToGlobalMouseEvents()
+        {
+            // install Mouse hook only if it is not installed and must be installed
+            if (s_MouseHookHandle == 0)
+            {
+                //See comment of this field. To avoid GC to clean it up.
+                s_MouseDelegate = MouseHookProc;
+                //install hook
+                s_MouseHookHandle = SetWindowsHookEx(
+                    WH_MOUSE_LL,
+                    s_MouseDelegate,
+                    Marshal.GetHINSTANCE(
+                        Assembly.GetExecutingAssembly().GetModules()[0]),
+                    0);
+                //If SetWindowsHookEx fails.
+                if (s_MouseHookHandle == 0)
+                {
+                    //Returns the error code returned by the last unmanaged function called using platform invoke that has the DllImportAttribute.SetLastError flag set. 
+                    int errorCode = Marshal.GetLastWin32Error();
+                    //do cleanup
+
+                    //Initializes and throws a new instance of the Win32Exception class with the specified error. 
+                    throw new Win32Exception(errorCode);
+                }
+            }
+        }
+
+        private static void TryUnsubscribeFromGlobalMouseEvents()
+        {
+            //if no subsribers are registered unsubsribe from hook
+            if (s_MouseClick == null &amp;&amp;
+                s_MouseDown == null &amp;&amp;
+                s_MouseMove == null &amp;&amp;
+                s_MouseUp == null &amp;&amp;
+                s_MouseClickExt == null &amp;&amp;
+                s_MouseMoveExt == null &amp;&amp;
+                s_MouseWheel == null)
+            {
+                ForceUnsunscribeFromGlobalMouseEvents();
+            }
+        }
+
+        private static void ForceUnsunscribeFromGlobalMouseEvents()
+        {
+            if (s_MouseHookHandle != 0)
+            {
+                //uninstall hook
+                int result = UnhookWindowsHookEx(s_MouseHookHandle);
+                //reset invalid handle
+                s_MouseHookHandle = 0;
+                //Free up for GC
+                s_MouseDelegate = null;
+                //if failed and exception must be thrown
+                if (result == 0)
+                {
+                    //Returns the error code returned by the last unmanaged function called using platform invoke that has the DllImportAttribute.SetLastError flag set. 
+                    int errorCode = Marshal.GetLastWin32Error();
+                    //Initializes and throws a new instance of the Win32Exception class with the specified error. 
+                    throw new Win32Exception(errorCode);
+                }
+            }
+        }
+        
+        #endregion
+
+        //##############################################################################
+        #region Keyboard hook processing
+
+        /// &lt;summary&gt;
+        /// This field is not objectively needed but we need to keep a reference on a delegate which will be 
+        /// passed to unmanaged code. To avoid GC to clean it up.
+        /// When passing delegates to unmanaged code, they must be kept alive by the managed application 
+        /// until it is guaranteed that they will never be called.
+        /// &lt;/summary&gt;
+        private static HookProc s_KeyboardDelegate;
+
+        /// &lt;summary&gt;
+        /// Stores the handle to the Keyboard hook procedure.
+        /// &lt;/summary&gt;
+        private static int s_KeyboardHookHandle;
+
+        /// &lt;summary&gt;
+        /// A callback function which will be called every Time a keyboard activity detected.
+        /// &lt;/summary&gt;
+        /// &lt;param name="nCode"&gt;
+        /// [in] Specifies whether the hook procedure must process the message. 
+        /// If nCode is HC_ACTION, the hook procedure must process the message. 
+        /// If nCode is less than zero, the hook procedure must pass the message to the 
+        /// CallNextHookEx function without further processing and must return the 
+        /// value returned by CallNextHookEx.
+        /// &lt;/param&gt;
+        /// &lt;param name="wParam"&gt;
+        /// [in] Specifies whether the message was sent by the current thread. 
+        /// If the message was sent by the current thread, it is nonzero; otherwise, it is zero. 
+        /// &lt;/param&gt;
+        /// &lt;param name="lParam"&gt;
+        /// [in] Pointer to a CWPSTRUCT structure that contains details about the message. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// If nCode is less than zero, the hook procedure must return the value returned by CallNextHookEx. 
+        /// If nCode is greater than or equal to zero, it is highly recommended that you call CallNextHookEx 
+        /// and return the value it returns; otherwise, other applications that have installed WH_CALLWNDPROC 
+        /// hooks will not receive hook notifications and may behave incorrectly as a result. If the hook 
+        /// procedure does not call CallNextHookEx, the return value should be zero. 
+        /// &lt;/returns&gt;
+        private static int KeyboardHookProc(int nCode, Int32 wParam, IntPtr lParam)
+        {
+            //indicates if any of underlaing events set e.Handled flag
+            bool handled = false;
+
+            if (nCode &gt;= 0)
+            {
+                //read structure KeyboardHookStruct at lParam
+                KeyboardHookStruct MyKeyboardHookStruct = (KeyboardHookStruct)Marshal.PtrToStructure(lParam, typeof(KeyboardHookStruct));
+                //raise KeyDown
+                if (s_KeyDown != null &amp;&amp; (wParam == WM_KEYDOWN || wParam == WM_SYSKEYDOWN))
+                {
+                    Keys keyData = (Keys)MyKeyboardHookStruct.VirtualKeyCode;
+                    KeyEventArgs e = new KeyEventArgs(keyData);
+                    s_KeyDown.Invoke(null, e);
+                    handled = e.Handled;
+                }
+
+                // raise KeyPress
+                if (s_KeyPress != null &amp;&amp; wParam == WM_KEYDOWN)
+                {
+                    bool isDownShift = ((GetKeyState(VK_SHIFT) &amp; 0x80) == 0x80 ? true : false);
+                    bool isDownCapslock = (GetKeyState(VK_CAPITAL) != 0 ? true : false);
+
+                    byte[] keyState = new byte[256];
+                    GetKeyboardState(keyState);
+                    byte[] inBuffer = new byte[2];
+                    if (ToAscii(MyKeyboardHookStruct.VirtualKeyCode,
+                              MyKeyboardHookStruct.ScanCode,
+                              keyState,
+                              inBuffer,
+                              MyKeyboardHookStruct.Flags) == 1)
+                    {
+                        char key = (char)inBuffer[0];
+                        if ((isDownCapslock ^ isDownShift) &amp;&amp; Char.IsLetter(key)) key = Char.ToUpper(key);
+                        KeyPressEventArgs e = new KeyPressEventArgs(key);
+                        s_KeyPress.Invoke(null, e);
+                        handled = handled || e.Handled;
+                    }
+                }
+
+                // raise KeyUp
+                if (s_KeyUp != null &amp;&amp; (wParam == WM_KEYUP || wParam == WM_SYSKEYUP))
+                {
+                    Keys keyData = (Keys)MyKeyboardHookStruct.VirtualKeyCode;
+                    KeyEventArgs e = new KeyEventArgs(keyData);
+                    s_KeyUp.Invoke(null, e);
+                    handled = handled || e.Handled;
+                }
+
+            }
+
+            //if event handled in application do not handoff to other listeners
+            if (handled)
+                return -1;
+
+            //forward to other application
+            return CallNextHookEx(s_KeyboardHookHandle, nCode, wParam, lParam);
+        }
+
+        private static void EnsureSubscribedToGlobalKeyboardEvents()
+        {
+       
+            // install Keyboard hook only if it is not installed and must be installed
+            if (s_KeyboardHookHandle == 0)
+            {
+                //See comment of this field. To avoid GC to clean it up.
+                s_KeyboardDelegate = KeyboardHookProc;
+                //install hook
+
+                s_KeyboardHookHandle = SetWindowsHookEx(
+                    WH_KEYBOARD_LL,
+                    s_KeyboardDelegate,
+                    GetModuleHandle("user32"),
+                    0);
+                //If SetWindowsHookEx fails.
+                if (s_KeyboardHookHandle == 0)
+                {
+                    //Returns the error code returned by the last unmanaged function called using platform invoke that has the DllImportAttribute.SetLastError flag set. 
+                    int errorCode = Marshal.GetLastWin32Error();
+                    //do cleanup
+
+                    //Initializes and throws a new instance of the Win32Exception class with the specified error. 
+                    throw new Win32Exception(errorCode);
+                }
+            }
+        }
+
+        private static void TryUnsubscribeFromGlobalKeyboardEvents()
+        {
+            //if no subsribers are registered unsubsribe from hook
+            if (s_KeyDown == null &amp;&amp;
+                s_KeyUp == null &amp;&amp;
+                s_KeyPress == null)
+            {
+                ForceUnsunscribeFromGlobalKeyboardEvents();
+            }
+        }
+
+        private static void ForceUnsunscribeFromGlobalKeyboardEvents()
+        {
+            if (s_KeyboardHookHandle != 0)
+            {
+                //uninstall hook
+                int result = UnhookWindowsHookEx(s_KeyboardHookHandle);
+                //reset invalid handle
+                s_KeyboardHookHandle = 0;
+                //Free up for GC
+                s_KeyboardDelegate = null;
+                //if failed and exception must be thrown
+                if (result == 0)
+                {
+                    //Returns the error code returned by the last unmanaged function called using platform invoke that has the DllImportAttribute.SetLastError flag set. 
+                    int errorCode = Marshal.GetLastWin32Error();
+                    //Initializes and throws a new instance of the Win32Exception class with the specified error. 
+                    throw new Win32Exception(errorCode);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+}
+</Code><Critical>1</Critical></File><File><Name>HookManager.cs</Name><Code>using System;
+using System.Windows.Forms;
+
+namespace Gma.UserActivityMonitor {
+
+    /// &lt;summary&gt;
+    /// This class monitors all mouse activities globally (also outside of the application) 
+    /// and provides appropriate events.
+    /// &lt;/summary&gt;
+    public static partial class HookManager
+    {
+        //################################################################
+        #region Mouse events
+
+        private static event MouseEventHandler s_MouseMove;
+
+        /// &lt;summary&gt;
+        /// Occurs when the mouse pointer is moved. 
+        /// &lt;/summary&gt;
+        public static event MouseEventHandler MouseMove
+        {
+            add
+            {
+                EnsureSubscribedToGlobalMouseEvents();
+                s_MouseMove += value;
+            }
+
+            remove
+            {
+                s_MouseMove -= value;
+                TryUnsubscribeFromGlobalMouseEvents();
+            }
+        }
+
+        private static event EventHandler&lt;MouseEventExtArgs&gt; s_MouseMoveExt;
+
+        /// &lt;summary&gt;
+        /// Occurs when the mouse pointer is moved. 
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// This event provides extended arguments of type &lt;see cref="MouseEventArgs"/&gt; enabling you to 
+        /// supress further processing of mouse movement in other applications.
+        /// &lt;/remarks&gt;
+        public static event EventHandler&lt;MouseEventExtArgs&gt; MouseMoveExt
+        {
+            add
+            {
+                EnsureSubscribedToGlobalMouseEvents();
+                s_MouseMoveExt += value;
+            }
+
+            remove
+            {
+
+                s_MouseMoveExt -= value;
+                TryUnsubscribeFromGlobalMouseEvents();
+            }
+        }
+
+        private static event MouseEventHandler s_MouseClick;
+
+        /// &lt;summary&gt;
+        /// Occurs when a click was performed by the mouse. 
+        /// &lt;/summary&gt;
+        public static event MouseEventHandler MouseClick
+        {
+            add
+            {
+                EnsureSubscribedToGlobalMouseEvents();
+                s_MouseClick += value;
+            }
+            remove
+            {
+                s_MouseClick -= value;
+                TryUnsubscribeFromGlobalMouseEvents();
+            }
+        }
+
+        private static event EventHandler&lt;MouseEventExtArgs&gt; s_MouseClickExt;
+
+        /// &lt;summary&gt;
+        /// Occurs when a click was performed by the mouse. 
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// This event provides extended arguments of type &lt;see cref="MouseEventArgs"/&gt; enabling you to 
+        /// supress further processing of mouse click in other applications.
+        /// &lt;/remarks&gt;
+        public static event EventHandler&lt;MouseEventExtArgs&gt; MouseClickExt
+        {
+            add
+            {
+                EnsureSubscribedToGlobalMouseEvents();
+                s_MouseClickExt += value;
+            }
+            remove
+            {
+                s_MouseClickExt -= value;
+                TryUnsubscribeFromGlobalMouseEvents();
+            }
+        }
+
+        private static event MouseEventHandler s_MouseDown;
+
+        /// &lt;summary&gt;
+        /// Occurs when the mouse a mouse button is pressed. 
+        /// &lt;/summary&gt;
+        public static event MouseEventHandler  MouseDown
+        {
+            add 
+            { 
+                EnsureSubscribedToGlobalMouseEvents();
+                s_MouseDown += value;
+            }
+            remove
+            {
+                s_MouseDown -= value;
+                TryUnsubscribeFromGlobalMouseEvents();
+            }
+        }
+
+        private static event MouseEventHandler s_MouseUp;
+
+        /// &lt;summary&gt;
+        /// Occurs when a mouse button is released. 
+        /// &lt;/summary&gt;
+        public static event MouseEventHandler MouseUp
+        {
+            add
+            {
+                EnsureSubscribedToGlobalMouseEvents();
+                s_MouseUp += value;
+            }
+            remove
+            {
+                s_MouseUp -= value;
+                TryUnsubscribeFromGlobalMouseEvents();
+            }
+        }
+
+        private static event MouseEventHandler s_MouseWheel;
+
+        /// &lt;summary&gt;
+        /// Occurs when the mouse wheel moves. 
+        /// &lt;/summary&gt;
+        public static event MouseEventHandler MouseWheel
+        {
+            add
+            {
+                EnsureSubscribedToGlobalMouseEvents();
+                s_MouseWheel += value;
+            }
+            remove
+            {
+                s_MouseWheel -= value;
+                TryUnsubscribeFromGlobalMouseEvents();
+            }
+        }
+
+
+        private static event MouseEventHandler s_MouseDoubleClick;
+
+        //The double click event will not be provided directly from hook.
+        //To fire the double click event wee need to monitor mouse up event and when it occures 
+        //Two times during the time interval which is defined in Windows as a doble click time
+        //we fire this event.
+
+        /// &lt;summary&gt;
+        /// Occurs when a double clicked was performed by the mouse. 
+        /// &lt;/summary&gt;
+        public static event MouseEventHandler MouseDoubleClick
+        {
+            add
+            {
+                EnsureSubscribedToGlobalMouseEvents();
+                if (s_MouseDoubleClick == null)
+                {
+                    //We create a timer to monitor interval between two clicks
+                    s_DoubleClickTimer = new Timer
+                    {
+                        //This interval will be set to the value we retrive from windows. This is a windows setting from contro planel.
+                        Interval = GetDoubleClickTime(),
+                        //We do not start timer yet. It will be start when the click occures.
+                        Enabled = false
+                    };
+                    //We define the callback function for the timer
+                    s_DoubleClickTimer.Tick += DoubleClickTimeElapsed;
+                    //We start to monitor mouse up event.
+                    MouseUp += OnMouseUp;
+                }
+                s_MouseDoubleClick += value;
+            }
+            remove
+            {
+                if (s_MouseDoubleClick != null)
+                {
+                    s_MouseDoubleClick -= value;
+                    if (s_MouseDoubleClick == null)
+                    {
+                        //Stop monitoring mouse up
+                        MouseUp -= OnMouseUp;
+                        //Dispose the timer
+                        s_DoubleClickTimer.Tick -= DoubleClickTimeElapsed;
+                        s_DoubleClickTimer = null;
+                    }
+                }
+                TryUnsubscribeFromGlobalMouseEvents();
+            }
+        }
+
+        //This field remembers mouse button pressed because in addition to the short interval it must be also the same button.
+        private static MouseButtons s_PrevClickedButton;
+        //The timer to monitor time interval between two clicks.
+        private static Timer s_DoubleClickTimer;
+
+        private static void DoubleClickTimeElapsed(object sender, EventArgs e)
+        {
+            //Timer is alapsed and no second click ocuured
+            s_DoubleClickTimer.Enabled = false;
+            s_PrevClickedButton = MouseButtons.None;
+        }
+
+        /// &lt;summary&gt;
+        /// This method is designed to monitor mouse clicks in order to fire a double click event if interval between 
+        /// clicks was short enaugh.
+        /// &lt;/summary&gt;
+        /// &lt;param name="sender"&gt;Is always null&lt;/param&gt;
+        /// &lt;param name="e"&gt;Some information about click heppened.&lt;/param&gt;
+        private static void OnMouseUp(object sender, MouseEventArgs e)
+        {
+            //This should not heppen
+            if (e.Clicks &lt; 1) { return;}
+            //If the secon click heppened on the same button
+            if (e.Button.Equals(s_PrevClickedButton))
+            {
+                if (s_MouseDoubleClick!=null)
+                {
+                    //Fire double click
+                    s_MouseDoubleClick.Invoke(null, e);
+                }
+                //Stop timer
+                s_DoubleClickTimer.Enabled = false;
+                s_PrevClickedButton = MouseButtons.None;
+            }
+            else
+            {
+                //If it was the firts click start the timer
+                s_DoubleClickTimer.Enabled = true;
+                s_PrevClickedButton = e.Button;
+            }
+        }
+        #endregion
+
+        //################################################################
+        #region Keyboard events
+
+        private static event KeyPressEventHandler s_KeyPress;
+
+        /// &lt;summary&gt;
+        /// Occurs when a key is pressed.
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// Key events occur in the following order: 
+        /// &lt;list type="number"&gt;
+        /// &lt;item&gt;KeyDown&lt;/item&gt;
+        /// &lt;item&gt;KeyPress&lt;/item&gt;
+        /// &lt;item&gt;KeyUp&lt;/item&gt;
+        /// &lt;/list&gt;
+        ///The KeyPress event is not raised by noncharacter keys; however, the noncharacter keys do raise the KeyDown and KeyUp events. 
+        ///Use the KeyChar property to sample keystrokes at run time and to consume or modify a subset of common keystrokes. 
+        ///To handle keyboard events only in your application and not enable other applications to receive keyboard events, 
+        /// set the KeyPressEventArgs.Handled property in your form's KeyPress event-handling method to &lt;b&gt;true&lt;/b&gt;. 
+        /// &lt;/remarks&gt;
+        public static event KeyPressEventHandler KeyPress
+        {
+            add
+            {
+                EnsureSubscribedToGlobalKeyboardEvents();
+                s_KeyPress += value;
+            }
+            remove
+            {
+                s_KeyPress -= value;
+                TryUnsubscribeFromGlobalKeyboardEvents();
+            }
+        }
+
+        private static event KeyEventHandler s_KeyUp;
+
+        /// &lt;summary&gt;
+        /// Occurs when a key is released. 
+        /// &lt;/summary&gt;
+        public static event KeyEventHandler KeyUp
+        {
+            add
+            {
+                EnsureSubscribedToGlobalKeyboardEvents();
+                s_KeyUp += value;
+            }
+            remove
+            {
+                s_KeyUp -= value;
+                TryUnsubscribeFromGlobalKeyboardEvents();
+            }
+        }
+
+        private static event KeyEventHandler s_KeyDown;
+
+        /// &lt;summary&gt;
+        /// Occurs when a key is preseed. 
+        /// &lt;/summary&gt;
+        public static event KeyEventHandler KeyDown
+        {
+            add
+            {
+                EnsureSubscribedToGlobalKeyboardEvents();
+                s_KeyDown += value;
+            }
+            remove
+            {
+                s_KeyDown -= value;
+                TryUnsubscribeFromGlobalKeyboardEvents();
+            }
+        }
+
+
+        #endregion
+    }
+}
+</Code><Critical>1</Critical></File><File><Name>HookManager.Structures.cs</Name><Code>using System.Runtime.InteropServices;
+
+namespace Gma.UserActivityMonitor {
+
+    public static partial class HookManager {
+        /// &lt;summary&gt;
+        /// The Point structure defines the X- and Y- coordinates of a point. 
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/gdi/rectangl_0tiq.asp
+        /// &lt;/remarks&gt;
+        [StructLayout(LayoutKind.Sequential)]
+        private struct Point {
+            /// &lt;summary&gt;
+            /// Specifies the X-coordinate of the point. 
+            /// &lt;/summary&gt;
+            public int X;
+            /// &lt;summary&gt;
+            /// Specifies the Y-coordinate of the point. 
+            /// &lt;/summary&gt;
+            public int Y;
+        }
+
+        /// &lt;summary&gt;
+        /// The MSLLHOOKSTRUCT structure contains information about a low-level keyboard input event. 
+        /// &lt;/summary&gt;
+        [StructLayout(LayoutKind.Sequential)]
+        private struct MouseLLHookStruct {
+            /// &lt;summary&gt;
+            /// Specifies a Point structure that contains the X- and Y-coordinates of the cursor, in screen coordinates. 
+            /// &lt;/summary&gt;
+            public Point Point;
+            /// &lt;summary&gt;
+            /// If the message is WM_MOUSEWHEEL, the high-order word of this member is the wheel delta. 
+            /// The low-order word is reserved. A positive value indicates that the wheel was rotated forward, 
+            /// away from the user; a negative value indicates that the wheel was rotated backward, toward the user. 
+            /// One wheel click is defined as WHEEL_DELTA, which is 120. 
+            ///If the message is WM_XBUTTONDOWN, WM_XBUTTONUP, WM_XBUTTONDBLCLK, WM_NCXBUTTONDOWN, WM_NCXBUTTONUP,
+            /// or WM_NCXBUTTONDBLCLK, the high-order word specifies which X button was pressed or released, 
+            /// and the low-order word is reserved. This value can be one or more of the following values. Otherwise, MouseData is not used. 
+            ///XBUTTON1
+            ///The first X button was pressed or released.
+            ///XBUTTON2
+            ///The second X button was pressed or released.
+            /// &lt;/summary&gt;
+            public int MouseData;
+            /// &lt;summary&gt;
+            /// Specifies the event-injected flag. An application can use the following value to test the mouse Flags. Value Purpose 
+            ///LLMHF_INJECTED Test the event-injected flag.  
+            ///0
+            ///Specifies whether the event was injected. The value is 1 if the event was injected; otherwise, it is 0.
+            ///1-15
+            ///Reserved.
+            /// &lt;/summary&gt;
+            public int Flags;
+            /// &lt;summary&gt;
+            /// Specifies the Time stamp for this message.
+            /// &lt;/summary&gt;
+            public int Time;
+            /// &lt;summary&gt;
+            /// Specifies extra information associated with the message. 
+            /// &lt;/summary&gt;
+            public int ExtraInfo;
+        }
+
+        /// &lt;summary&gt;
+        /// The KBDLLHOOKSTRUCT structure contains information about a low-level keyboard input event. 
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/windowing/hooks/hookreference/hookstructures/cwpstruct.asp
+        /// &lt;/remarks&gt;
+        [StructLayout(LayoutKind.Sequential)]
+        private struct KeyboardHookStruct
+        {
+            /// &lt;summary&gt;
+            /// Specifies a virtual-key code. The code must be a value in the range 1 to 254. 
+            /// &lt;/summary&gt;
+            public int VirtualKeyCode;
+            /// &lt;summary&gt;
+            /// Specifies a hardware scan code for the key. 
+            /// &lt;/summary&gt;
+            public int ScanCode;
+            /// &lt;summary&gt;
+            /// Specifies the extended-key flag, event-injected flag, context code, and transition-state flag.
+            /// &lt;/summary&gt;
+            public int Flags;
+            /// &lt;summary&gt;
+            /// Specifies the Time stamp for this message.
+            /// &lt;/summary&gt;
+            public int Time;
+            /// &lt;summary&gt;
+            /// Specifies extra information associated with the message. 
+            /// &lt;/summary&gt;
+            public int ExtraInfo;
+        }
+    }
+}
+</Code><Critical>1</Critical></File><File><Name>HookManager.Windows.cs</Name><Code>using System;
+using System.Runtime.InteropServices;
+
+namespace Gma.UserActivityMonitor
+{
+    public static partial class HookManager
+    {
+        #region Windows constants
+
+        //values from Winuser.h in Microsoft SDK.
+        /// &lt;summary&gt;
+        /// Windows NT/2000/XP: Installs a hook procedure that monitors low-level mouse input events.
+        /// &lt;/summary&gt;
+        private const int WH_MOUSE_LL = 14;
+
+        /// &lt;summary&gt;
+        /// Windows NT/2000/XP: Installs a hook procedure that monitors low-level keyboard  input events.
+        /// &lt;/summary&gt;
+        private const int WH_KEYBOARD_LL = 13;
+
+        /// &lt;summary&gt;
+        /// Installs a hook procedure that monitors mouse messages. For more information, see the MouseProc hook procedure. 
+        /// &lt;/summary&gt;
+        private const int WH_MOUSE = 7;
+
+        /// &lt;summary&gt;
+        /// Installs a hook procedure that monitors keystroke messages. For more information, see the KeyboardProc hook procedure. 
+        /// &lt;/summary&gt;
+        private const int WH_KEYBOARD = 2;
+
+        /// &lt;summary&gt;
+        /// The WM_MOUSEMOVE message is posted to a window when the cursor moves. 
+        /// &lt;/summary&gt;
+        private const int WM_MOUSEMOVE = 0x200;
+
+        /// &lt;summary&gt;
+        /// The WM_LBUTTONDOWN message is posted when the user presses the left mouse button 
+        /// &lt;/summary&gt;
+        private const int WM_LBUTTONDOWN = 0x201;
+
+        /// &lt;summary&gt;
+        /// The WM_RBUTTONDOWN message is posted when the user presses the right mouse button
+        /// &lt;/summary&gt;
+        private const int WM_RBUTTONDOWN = 0x204;
+
+        /// &lt;summary&gt;
+        /// The WM_MBUTTONDOWN message is posted when the user presses the middle mouse button 
+        /// &lt;/summary&gt;
+        private const int WM_MBUTTONDOWN = 0x207;
+
+        /// &lt;summary&gt;
+        /// The WM_LBUTTONUP message is posted when the user releases the left mouse button 
+        /// &lt;/summary&gt;
+        private const int WM_LBUTTONUP = 0x202;
+
+        /// &lt;summary&gt;
+        /// The WM_RBUTTONUP message is posted when the user releases the right mouse button 
+        /// &lt;/summary&gt;
+        private const int WM_RBUTTONUP = 0x205;
+
+        /// &lt;summary&gt;
+        /// The WM_MBUTTONUP message is posted when the user releases the middle mouse button 
+        /// &lt;/summary&gt;
+        private const int WM_MBUTTONUP = 0x208;
+
+        /// &lt;summary&gt;
+        /// The WM_LBUTTONDBLCLK message is posted when the user double-clicks the left mouse button 
+        /// &lt;/summary&gt;
+        private const int WM_LBUTTONDBLCLK = 0x203;
+
+        /// &lt;summary&gt;
+        /// The WM_RBUTTONDBLCLK message is posted when the user double-clicks the right mouse button 
+        /// &lt;/summary&gt;
+        private const int WM_RBUTTONDBLCLK = 0x206;
+
+        /// &lt;summary&gt;
+        /// The WM_RBUTTONDOWN message is posted when the user presses the right mouse button 
+        /// &lt;/summary&gt;
+        private const int WM_MBUTTONDBLCLK = 0x209;
+
+        /// &lt;summary&gt;
+        /// The WM_MOUSEWHEEL message is posted when the user presses the mouse wheel. 
+        /// &lt;/summary&gt;
+        private const int WM_MOUSEWHEEL = 0x020A;
+
+        /// &lt;summary&gt;
+        /// The WM_KEYDOWN message is posted to the window with the keyboard focus when a nonsystem 
+        /// key is pressed. A nonsystem key is a key that is pressed when the ALT key is not pressed.
+        /// &lt;/summary&gt;
+        private const int WM_KEYDOWN = 0x100;
+
+        /// &lt;summary&gt;
+        /// The WM_KEYUP message is posted to the window with the keyboard focus when a nonsystem 
+        /// key is released. A nonsystem key is a key that is pressed when the ALT key is not pressed, 
+        /// or a keyboard key that is pressed when a window has the keyboard focus.
+        /// &lt;/summary&gt;
+        private const int WM_KEYUP = 0x101;
+
+        /// &lt;summary&gt;
+        /// The WM_SYSKEYDOWN message is posted to the window with the keyboard focus when the user 
+        /// presses the F10 key (which activates the menu bar) or holds down the ALT key and then 
+        /// presses another key. It also occurs when no window currently has the keyboard focus; 
+        /// in this case, the WM_SYSKEYDOWN message is sent to the active window. The window that 
+        /// receives the message can distinguish between these two contexts by checking the context 
+        /// code in the lParam parameter. 
+        /// &lt;/summary&gt;
+        private const int WM_SYSKEYDOWN = 0x104;
+
+        /// &lt;summary&gt;
+        /// The WM_SYSKEYUP message is posted to the window with the keyboard focus when the user 
+        /// releases a key that was pressed while the ALT key was held down. It also occurs when no 
+        /// window currently has the keyboard focus; in this case, the WM_SYSKEYUP message is sent 
+        /// to the active window. The window that receives the message can distinguish between 
+        /// these two contexts by checking the context code in the lParam parameter. 
+        /// &lt;/summary&gt;
+        private const int WM_SYSKEYUP = 0x105;
+
+        private const byte VK_SHIFT = 0x10;
+        private const byte VK_CAPITAL = 0x14;
+        private const byte VK_NUMLOCK = 0x90;
+
+        #endregion
+
+        #region Windows function imports
+    [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+    private static extern IntPtr GetModuleHandle(string lpModuleName);
+
+        /// &lt;summary&gt;
+        /// The CallNextHookEx function passes the hook information to the next hook procedure in the current hook chain. 
+        /// A hook procedure can call this function either before or after processing the hook information. 
+        /// &lt;/summary&gt;
+        /// &lt;param name="idHook"&gt;Ignored.&lt;/param&gt;
+        /// &lt;param name="nCode"&gt;
+        /// [in] Specifies the hook code passed to the current hook procedure. 
+        /// The next hook procedure uses this code to determine how to process the hook information.
+        /// &lt;/param&gt;
+        /// &lt;param name="wParam"&gt;
+        /// [in] Specifies the wParam value passed to the current hook procedure. 
+        /// The meaning of this parameter depends on the type of hook associated with the current hook chain. 
+        /// &lt;/param&gt;
+        /// &lt;param name="lParam"&gt;
+        /// [in] Specifies the lParam value passed to the current hook procedure. 
+        /// The meaning of this parameter depends on the type of hook associated with the current hook chain. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// This value is returned by the next hook procedure in the chain. 
+        /// The current hook procedure must also return this value. The meaning of the return value depends on the hook type. 
+        /// For more information, see the descriptions of the individual hook procedures.
+        /// &lt;/returns&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/windowing/hooks/hookreference/hookfunctions/setwindowshookex.asp
+        /// &lt;/remarks&gt;
+        [DllImport("user32.dll", CharSet = CharSet.Auto,
+            CallingConvention = CallingConvention.StdCall)]
+        private static extern int CallNextHookEx(
+            int idHook,
+            int nCode,
+            int wParam,
+            IntPtr lParam);
+
+
+        /// &lt;summary&gt;
+        /// The SetWindowsHookEx function installs an application-defined hook procedure into a hook chain. 
+        /// You would install a hook procedure to monitor the system for certain types of events. These events 
+        /// are associated either with a specific thread or with all threads in the same desktop as the calling thread. 
+        /// &lt;/summary&gt;
+        /// &lt;param name="idHook"&gt;
+        /// [in] Specifies the type of hook procedure to be installed. This parameter can be one of the following values.
+        /// &lt;/param&gt;
+        /// &lt;param name="lpfn"&gt;
+        /// [in] Pointer to the hook procedure. If the dwThreadId parameter is zero or specifies the identifier of a 
+        /// thread created by a different process, the lpfn parameter must point to a hook procedure in a dynamic-link 
+        /// library (DLL). Otherwise, lpfn can point to a hook procedure in the code associated with the current process.
+        /// &lt;/param&gt;
+        /// &lt;param name="hMod"&gt;
+        /// [in] Handle to the DLL containing the hook procedure pointed to by the lpfn parameter. 
+        /// The hMod parameter must be set to NULL if the dwThreadId parameter specifies a thread created by 
+        /// the current process and if the hook procedure is within the code associated with the current process. 
+        /// &lt;/param&gt;
+        /// &lt;param name="dwThreadId"&gt;
+        /// [in] Specifies the identifier of the thread with which the hook procedure is to be associated. 
+        /// If this parameter is zero, the hook procedure is associated with all existing threads running in the 
+        /// same desktop as the calling thread. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// If the function succeeds, the return value is the handle to the hook procedure.
+        /// If the function fails, the return value is NULL. To get extended error information, call GetLastError.
+        /// &lt;/returns&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/windowing/hooks/hookreference/hookfunctions/setwindowshookex.asp
+        /// &lt;/remarks&gt;
+        [DllImport("user32.dll", CharSet = CharSet.Auto,
+            CallingConvention = CallingConvention.StdCall, SetLastError = true)]
+        private static extern int SetWindowsHookEx(
+            int idHook,
+            HookProc lpfn,
+            IntPtr hMod,
+            int dwThreadId);
+
+        /// &lt;summary&gt;
+        /// The UnhookWindowsHookEx function removes a hook procedure installed in a hook chain by the SetWindowsHookEx function. 
+        /// &lt;/summary&gt;
+        /// &lt;param name="idHook"&gt;
+        /// [in] Handle to the hook to be removed. This parameter is a hook handle obtained by a previous call to SetWindowsHookEx. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// If the function succeeds, the return value is nonzero.
+        /// If the function fails, the return value is zero. To get extended error information, call GetLastError.
+        /// &lt;/returns&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/windowing/hooks/hookreference/hookfunctions/setwindowshookex.asp
+        /// &lt;/remarks&gt;
+        [DllImport("user32.dll", CharSet = CharSet.Auto,
+            CallingConvention = CallingConvention.StdCall, SetLastError = true)]
+        private static extern int UnhookWindowsHookEx(int idHook);
+
+        /// &lt;summary&gt;
+        /// The GetDoubleClickTime function retrieves the current double-click time for the mouse. A double-click is a series of two clicks of the 
+        /// mouse button, the second occurring within a specified time after the first. The double-click time is the maximum number of 
+        /// milliseconds that may occur between the first and second click of a double-click. 
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;
+        /// The return value specifies the current double-click time, in milliseconds. 
+        /// &lt;/returns&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/en-us/library/ms646258(VS.85).aspx
+        /// &lt;/remarks&gt;
+        [DllImport("user32")]
+        public static extern int GetDoubleClickTime();
+
+        /// &lt;summary&gt;
+        /// The ToAscii function translates the specified virtual-key code and keyboard 
+        /// state to the corresponding character or characters. The function translates the code 
+        /// using the input language and physical keyboard layout identified by the keyboard layout handle.
+        /// &lt;/summary&gt;
+        /// &lt;param name="uVirtKey"&gt;
+        /// [in] Specifies the virtual-key code to be translated. 
+        /// &lt;/param&gt;
+        /// &lt;param name="uScanCode"&gt;
+        /// [in] Specifies the hardware scan code of the key to be translated. 
+        /// The high-order bit of this value is set if the key is up (not pressed). 
+        /// &lt;/param&gt;
+        /// &lt;param name="lpbKeyState"&gt;
+        /// [in] Pointer to a 256-byte array that contains the current keyboard state. 
+        /// Each element (byte) in the array contains the state of one key. 
+        /// If the high-order bit of a byte is set, the key is down (pressed). 
+        /// The low bit, if set, indicates that the key is toggled on. In this function, 
+        /// only the toggle bit of the CAPS LOCK key is relevant. The toggle state 
+        /// of the NUM LOCK and SCROLL LOCK keys is ignored.
+        /// &lt;/param&gt;
+        /// &lt;param name="lpwTransKey"&gt;
+        /// [out] Pointer to the buffer that receives the translated character or characters. 
+        /// &lt;/param&gt;
+        /// &lt;param name="fuState"&gt;
+        /// [in] Specifies whether a menu is active. This parameter must be 1 if a menu is active, or 0 otherwise. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// If the specified key is a dead key, the return value is negative. Otherwise, it is one of the following values. 
+        /// Value Meaning 
+        /// 0 The specified virtual key has no translation for the current state of the keyboard. 
+        /// 1 One character was copied to the buffer. 
+        /// 2 Two characters were copied to the buffer. This usually happens when a dead-key character 
+        /// (accent or diacritic) stored in the keyboard layout cannot be composed with the specified 
+        /// virtual key to form a single character. 
+        /// &lt;/returns&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/userinput/keyboardinput/keyboardinputreference/keyboardinputfunctions/toascii.asp
+        /// &lt;/remarks&gt;
+        [DllImport("user32")]
+        private static extern int ToAscii(
+            int uVirtKey,
+            int uScanCode,
+            byte[] lpbKeyState,
+            byte[] lpwTransKey,
+            int fuState);
+
+        /// &lt;summary&gt;
+        /// The GetKeyboardState function copies the status of the 256 virtual keys to the 
+        /// specified buffer. 
+        /// &lt;/summary&gt;
+        /// &lt;param name="pbKeyState"&gt;
+        /// [in] Pointer to a 256-byte array that contains keyboard key states. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// If the function succeeds, the return value is nonzero.
+        /// If the function fails, the return value is zero. To get extended error information, call GetLastError. 
+        /// &lt;/returns&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/userinput/keyboardinput/keyboardinputreference/keyboardinputfunctions/toascii.asp
+        /// &lt;/remarks&gt;
+        [DllImport("user32")]
+        private static extern int GetKeyboardState(byte[] pbKeyState);
+
+        /// &lt;summary&gt;
+        /// The GetKeyState function retrieves the status of the specified virtual key. The status specifies whether the key is up, down, or toggled 
+        /// (on, off�alternating each time the key is pressed). 
+        /// &lt;/summary&gt;
+        /// &lt;param name="vKey"&gt;
+        /// [in] Specifies a virtual key. If the desired virtual key is a letter or digit (A through Z, a through z, or 0 through 9), nVirtKey must be set to the ASCII value of that character. For other keys, it must be a virtual-key code. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// The return value specifies the status of the specified virtual key, as follows: 
+        ///If the high-order bit is 1, the key is down; otherwise, it is up.
+        ///If the low-order bit is 1, the key is toggled. A key, such as the CAPS LOCK key, is toggled if it is turned on. The key is off and untoggled if the low-order bit is 0. A toggle key's indicator light (if any) on the keyboard will be on when the key is toggled, and off when the key is untoggled.
+        /// &lt;/returns&gt;
+        /// &lt;remarks&gt;http://msdn.microsoft.com/en-us/library/ms646301.aspx&lt;/remarks&gt;
+        [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        private static extern short GetKeyState(int vKey);
+
+        #endregion
+    }
+}</Code><Critical>1</Critical></File><File><Name>MouseEventExtArgs.cs</Name><Code>using System.Windows.Forms;
+
+namespace Gma.UserActivityMonitor
+{
+    /// &lt;summary&gt;
+    /// Provides data for the MouseClickExt and MouseMoveExt events. It also provides a property Handled.
+    /// Set this property to &lt;b&gt;true&lt;/b&gt; to prevent further processing of the event in other applications.
+    /// &lt;/summary&gt;
+    public class MouseEventExtArgs : MouseEventArgs
+    {
+        /// &lt;summary&gt;
+        /// Initializes a new instance of the MouseEventArgs class. 
+        /// &lt;/summary&gt;
+        /// &lt;param name="buttons"&gt;One of the MouseButtons values indicating which mouse button was pressed.&lt;/param&gt;
+        /// &lt;param name="clicks"&gt;The number of times a mouse button was pressed.&lt;/param&gt;
+        /// &lt;param name="x"&gt;The x-coordinate of a mouse click, in pixels.&lt;/param&gt;
+        /// &lt;param name="y"&gt;The y-coordinate of a mouse click, in pixels.&lt;/param&gt;
+        /// &lt;param name="delta"&gt;A signed count of the number of detents the wheel has rotated.&lt;/param&gt;
+        public MouseEventExtArgs(MouseButtons buttons, int clicks, int x, int y, int delta)
+            : base(buttons, clicks, x, y, delta)
+        {}
+
+        /// &lt;summary&gt;
+        /// Initializes a new instance of the MouseEventArgs class. 
+        /// &lt;/summary&gt;
+        /// &lt;param name="e"&gt;An ordinary &lt;see cref="MouseEventArgs"/&gt; argument to be extended.&lt;/param&gt;
+        internal MouseEventExtArgs(MouseEventArgs e) : base(e.Button, e.Clicks, e.X, e.Y, e.Delta)
+        {}
+
+        private bool m_Handled;
+
+        /// &lt;summary&gt;
+        /// Set this property to &lt;b&gt;true&lt;/b&gt; inside your event handler to prevent further processing of the event in other applications.
+        /// &lt;/summary&gt;
+        public bool Handled
+        {
+            get { return m_Handled; }
+            set { m_Handled = value; }
+        }
+    }
+}
+</Code><Critical>1</Critical></File></Files><ReferencedAssemeblies><ReferencedAssemebly>Microsoft.CSharp.dll</ReferencedAssemebly><ReferencedAssemebly>System.dll</ReferencedAssemebly><ReferencedAssemebly>System.Core.dll</ReferencedAssemebly><ReferencedAssemebly>System.Data.dll</ReferencedAssemebly><ReferencedAssemebly>System.Xml.dll</ReferencedAssemebly><ReferencedAssemebly>System.Windows.Forms.dll</ReferencedAssemebly><ReferencedAssemebly>System.Drawing.dll</ReferencedAssemebly></ReferencedAssemeblies></FormSource><Source><Files><File><Name>Default.cs</Name><Code>using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Windows.Forms;
+
+//Do not edit namespace or class name
+namespace Code
+{
+    public class Trigger
+    {
+    	List&lt;List&lt;Keys&gt;&gt; KeyCombinations = new List&lt;List&lt;Keys&gt;&gt;();
+    	List&lt;Keys&gt; CurrentKeys = new List&lt;Keys&gt;();
+    	
+        public object[] Params = null;
+        
+        //Call "TriggerDel.DynamicInvoke()" to trigger the task
+        public Delegate TriggerDel = null;
+        
+        public Trigger(Delegate Trigger, object[] Params)
+        {
+            this.TriggerDel = Trigger;
+            //These parameters will come from the form for this Trigger(Optional)
+            this.Params = Params;
+            KeyCombinations = (List&lt;List&lt;Keys&gt;&gt;)Params[0];
+            
+            HookManager.KeyDown += new KeyEventHandler(KeyDown);
+            HookManager.KeyUp += new KeyEventHandler(KeyUp);
+        }
+        
+        void KeyDown(object sender, KeyEventArgs e)
+        {
+       	     if (!CurrentKeys.Contains(e.KeyCode))
+            {
+	    	 CurrentKeys.Add(e.KeyCode);
+	    	 KeysPressed();
+	     }
+	} 
+	
+	void KeyUp(object sender, KeyEventArgs e)
+        {
+	    CurrentKeys.Remove(e.KeyCode);
+	} 
+	
+	//Trigger if specfied keys are pressed
+	private void KeysPressed()
+	{
+		List&lt;Keys&gt; TempKeys = new List&lt;Keys&gt;();
+		TempKeys.AddRange(CurrentKeys);
+		foreach(List&lt;Keys&gt; Keys in KeyCombinations)
+		{
+			if(Keys.Count != TempKeys.Count || Keys.Count == 0)
+				return;
+			bool KeysMatch = true;
+			int Count = 0;
+			foreach(Keys Key in Keys)
+			{
+				if(TempKeys[Count] != Key)
+					KeysMatch = false;
+				Count++;
+			}
+			if(KeysMatch)
+			{
+				TriggerDel.DynamicInvoke();
+			}
+		}
+	}
+	
+	public void Dispose()
+	{
+		HookManager.KeyDown -= KeyDown;
+		HookManager.KeyUp -= KeyUp;
+	}
+    }
+}
+</Code><Critical>0</Critical></File><File><Name>GlobalEventProvider.cs</Name><Code>using System;
+using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace Code
+{
+    /// &lt;summary&gt;
+    /// This component monitors all mouse activities globally (also outside of the application) 
+    /// and provides appropriate events.
+    /// &lt;/summary&gt;
+    public class GlobalEventProvider : Component
+    {
+        /// &lt;summary&gt;
+        /// This component raises events. The value is always true.
+        /// &lt;/summary&gt;
+        protected override bool CanRaiseEvents
+        {
+            get
+            {
+                return true;
+            }
+        }
+
+        //################################################################
+        #region Mouse events
+
+        private event MouseEventHandler m_MouseMove;
+
+        /// &lt;summary&gt;
+        /// Occurs when the mouse pointer is moved. 
+        /// &lt;/summary&gt;
+        public event MouseEventHandler MouseMove
+        {
+            add
+            {
+                if (m_MouseMove == null)
+                {
+                    HookManager.MouseMove += HookManager_MouseMove;
+                }
+                m_MouseMove += value;
+            }
+
+            remove
+            {
+                m_MouseMove -= value;
+                if (m_MouseMove == null)
+                {
+                    HookManager.MouseMove -= HookManager_MouseMove;
+                }
+            }
+        }
+
+        void HookManager_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m_MouseMove != null)
+            {
+                m_MouseMove.Invoke(this, e);
+            }
+        }
+
+        private event MouseEventHandler m_MouseClick;
+        /// &lt;summary&gt;
+        /// Occurs when a click was performed by the mouse. 
+        /// &lt;/summary&gt;
+        public event MouseEventHandler MouseClick
+        {
+            add
+            {
+                if (m_MouseClick == null)
+                {
+                    HookManager.MouseClick += HookManager_MouseClick;
+                }
+                m_MouseClick += value;
+            }
+
+            remove
+            {
+                m_MouseClick -= value;
+                if (m_MouseClick == null)
+                {
+                    HookManager.MouseClick -= HookManager_MouseClick;
+                }
+            }
+        }
+
+        void HookManager_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (m_MouseClick != null)
+            {
+                m_MouseClick.Invoke(this, e);
+            }
+        }
+
+        private event MouseEventHandler m_MouseDown;
+
+        /// &lt;summary&gt;
+        /// Occurs when the mouse a mouse button is pressed. 
+        /// &lt;/summary&gt;
+        public event MouseEventHandler MouseDown
+        {
+            add
+            {
+                if (m_MouseDown == null)
+                {
+                    HookManager.MouseDown += HookManager_MouseDown;
+                }
+                m_MouseDown += value;
+            }
+
+            remove
+            {
+                m_MouseDown -= value;
+                if (m_MouseDown == null)
+                {
+                    HookManager.MouseDown -= HookManager_MouseDown;
+                }
+            }
+        }
+
+        void HookManager_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (m_MouseDown != null)
+            {
+                m_MouseDown.Invoke(this, e);
+            }
+        }
+
+
+        private event MouseEventHandler m_MouseUp;
+
+        /// &lt;summary&gt;
+        /// Occurs when a mouse button is released. 
+        /// &lt;/summary&gt;
+        public event MouseEventHandler MouseUp
+        {
+            add
+            {
+                if (m_MouseUp == null)
+                {
+                    HookManager.MouseUp += HookManager_MouseUp;
+                }
+                m_MouseUp += value;
+            }
+
+            remove
+            {
+                m_MouseUp -= value;
+                if (m_MouseUp == null)
+                {
+                    HookManager.MouseUp -= HookManager_MouseUp;
+                }
+            }
+        }
+
+        void HookManager_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (m_MouseUp != null)
+            {
+                m_MouseUp.Invoke(this, e);
+            }
+        }
+
+        private event MouseEventHandler m_MouseDoubleClick;
+
+        /// &lt;summary&gt;
+        /// Occurs when a double clicked was performed by the mouse. 
+        /// &lt;/summary&gt;
+        public event MouseEventHandler MouseDoubleClick
+        {
+            add
+            {
+                if (m_MouseDoubleClick == null)
+                {
+                    HookManager.MouseDoubleClick += HookManager_MouseDoubleClick;
+                }
+                m_MouseDoubleClick += value;
+            }
+
+            remove
+            {
+                m_MouseDoubleClick -= value;
+                if (m_MouseDoubleClick == null)
+                {
+                    HookManager.MouseDoubleClick -= HookManager_MouseDoubleClick;
+                }
+            }
+        }
+
+        void HookManager_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (m_MouseDoubleClick != null)
+            {
+                m_MouseDoubleClick.Invoke(this, e);
+            }
+        }
+
+
+        private event EventHandler&lt;MouseEventExtArgs&gt; m_MouseMoveExt;
+
+        /// &lt;summary&gt;
+        /// Occurs when the mouse pointer is moved. 
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// This event provides extended arguments of type &lt;see cref="MouseEventArgs"/&gt; enabling you to 
+        /// supress further processing of mouse movement in other applications.
+        /// &lt;/remarks&gt;
+        public event EventHandler&lt;MouseEventExtArgs&gt; MouseMoveExt
+        {
+            add
+            {
+                if (m_MouseMoveExt == null)
+                {
+                    HookManager.MouseMoveExt += HookManager_MouseMoveExt;
+                }
+                m_MouseMoveExt += value;
+            }
+
+            remove
+            {
+                m_MouseMoveExt -= value;
+                if (m_MouseMoveExt == null)
+                {
+                    HookManager.MouseMoveExt -= HookManager_MouseMoveExt;
+                }
+            }
+        }
+
+        void HookManager_MouseMoveExt(object sender, MouseEventExtArgs e)
+        {
+            if (m_MouseMoveExt != null)
+            {
+                m_MouseMoveExt.Invoke(this, e);
+            }
+        }
+
+        private event EventHandler&lt;MouseEventExtArgs&gt; m_MouseClickExt;
+
+        /// &lt;summary&gt;
+        /// Occurs when a click was performed by the mouse. 
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// This event provides extended arguments of type &lt;see cref="MouseEventArgs"/&gt; enabling you to 
+        /// supress further processing of mouse click in other applications.
+        /// &lt;/remarks&gt;
+        public event EventHandler&lt;MouseEventExtArgs&gt; MouseClickExt
+        {
+            add
+            {
+                if (m_MouseClickExt == null)
+                {
+                    HookManager.MouseClickExt += HookManager_MouseClickExt;
+                }
+                m_MouseClickExt += value;
+            }
+
+            remove
+            {
+                m_MouseClickExt -= value;
+                if (m_MouseClickExt == null)
+                {
+                    HookManager.MouseClickExt -= HookManager_MouseClickExt;
+                }
+            }
+        }
+
+        void HookManager_MouseClickExt(object sender, MouseEventExtArgs e)
+        {
+            if (m_MouseClickExt != null)
+            {
+                m_MouseClickExt.Invoke(this, e);
+            }
+        }
+
+
+        #endregion
+
+        //################################################################
+        #region Keyboard events
+
+        private event KeyPressEventHandler m_KeyPress;
+
+        /// &lt;summary&gt;
+        /// Occurs when a key is pressed.
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// Key events occur in the following order: 
+        /// &lt;list type="number"&gt;
+        /// &lt;item&gt;KeyDown&lt;/item&gt;
+        /// &lt;item&gt;KeyPress&lt;/item&gt;
+        /// &lt;item&gt;KeyUp&lt;/item&gt;
+        /// &lt;/list&gt;
+        ///The KeyPress event is not raised by noncharacter keys; however, the noncharacter keys do raise the KeyDown and KeyUp events. 
+        ///Use the KeyChar property to sample keystrokes at run time and to consume or modify a subset of common keystrokes. 
+        ///To handle keyboard events only in your application and not enable other applications to receive keyboard events, 
+        /// set the KeyPressEventArgs.Handled property in your form's KeyPress event-handling method to &lt;b&gt;true&lt;/b&gt;. 
+        /// &lt;/remarks&gt;
+        public event KeyPressEventHandler KeyPress
+        {
+            add
+            {
+                if (m_KeyPress==null)
+                {
+                    HookManager.KeyPress +=HookManager_KeyPress;
+                }
+                m_KeyPress += value;
+            }
+            remove
+            {
+                m_KeyPress -= value;
+                if (m_KeyPress == null)
+                {
+                    HookManager.KeyPress -= HookManager_KeyPress;
+                }
+            }
+        }
+
+        void HookManager_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (m_KeyPress != null)
+            {
+                m_KeyPress.Invoke(this, e);
+            }
+        }
+
+        private event KeyEventHandler m_KeyUp;
+
+        /// &lt;summary&gt;
+        /// Occurs when a key is released. 
+        /// &lt;/summary&gt;
+        public event KeyEventHandler KeyUp
+        {
+            add
+            {
+                if (m_KeyUp == null)
+                {
+                    HookManager.KeyUp += HookManager_KeyUp;
+                }
+                m_KeyUp += value;
+            }
+            remove
+            {
+                m_KeyUp -= value;
+                if (m_KeyUp == null)
+                {
+                    HookManager.KeyUp -= HookManager_KeyUp;
+                }
+            }
+        }
+
+        private void HookManager_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (m_KeyUp != null)
+            {
+                m_KeyUp.Invoke(this, e);
+            }
+        }
+
+        private event KeyEventHandler m_KeyDown;
+
+        /// &lt;summary&gt;
+        /// Occurs when a key is preseed. 
+        /// &lt;/summary&gt;
+        public event KeyEventHandler KeyDown
+        {
+            add
+            {
+                if (m_KeyDown == null)
+                {
+                    HookManager.KeyDown += HookManager_KeyDown;
+                }
+                m_KeyDown += value;
+            }
+            remove
+            {
+                m_KeyDown -= value;
+                if (m_KeyDown == null)
+                {
+                    HookManager.KeyDown -= HookManager_KeyDown;
+                }
+            }
+        }
+
+        private void HookManager_KeyDown(object sender, KeyEventArgs e)
+        {
+            m_KeyDown.Invoke(this, e);
+        }
+
+        #endregion
+
+        
+    }
+}
+</Code><Critical>0</Critical></File><File><Name>HookManager.Callbacks.cs</Name><Code>using System;
+using System.ComponentModel;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
+
+namespace Code
+{
+    public static partial class HookManager
+    {
+        /// &lt;summary&gt;
+        /// The CallWndProc hook procedure is an application-defined or library-defined callback 
+        /// function used with the SetWindowsHookEx function. The HOOKPROC type defines a pointer 
+        /// to this callback function. CallWndProc is a placeholder for the application-defined 
+        /// or library-defined function name.
+        /// &lt;/summary&gt;
+        /// &lt;param name="nCode"&gt;
+        /// [in] Specifies whether the hook procedure must process the message. 
+        /// If nCode is HC_ACTION, the hook procedure must process the message. 
+        /// If nCode is less than zero, the hook procedure must pass the message to the 
+        /// CallNextHookEx function without further processing and must return the 
+        /// value returned by CallNextHookEx.
+        /// &lt;/param&gt;
+        /// &lt;param name="wParam"&gt;
+        /// [in] Specifies whether the message was sent by the current thread. 
+        /// If the message was sent by the current thread, it is nonzero; otherwise, it is zero. 
+        /// &lt;/param&gt;
+        /// &lt;param name="lParam"&gt;
+        /// [in] Pointer to a CWPSTRUCT structure that contains details about the message. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// If nCode is less than zero, the hook procedure must return the value returned by CallNextHookEx. 
+        /// If nCode is greater than or equal to zero, it is highly recommended that you call CallNextHookEx 
+        /// and return the value it returns; otherwise, other applications that have installed WH_CALLWNDPROC 
+        /// hooks will not receive hook notifications and may behave incorrectly as a result. If the hook 
+        /// procedure does not call CallNextHookEx, the return value should be zero. 
+        /// &lt;/returns&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/windowing/hooks/hookreference/hookfunctions/callwndproc.asp
+        /// &lt;/remarks&gt;
+        private delegate int HookProc(int nCode, int wParam, IntPtr lParam);
+
+        //##############################################################################
+        #region Mouse hook processing
+
+        /// &lt;summary&gt;
+        /// This field is not objectively needed but we need to keep a reference on a delegate which will be 
+        /// passed to unmanaged code. To avoid GC to clean it up.
+        /// When passing delegates to unmanaged code, they must be kept alive by the managed application 
+        /// until it is guaranteed that they will never be called.
+        /// &lt;/summary&gt;
+        private static HookProc s_MouseDelegate;
+
+        /// &lt;summary&gt;
+        /// Stores the handle to the mouse hook procedure.
+        /// &lt;/summary&gt;
+        private static int s_MouseHookHandle;
+
+        private static int m_OldX;
+        private static int m_OldY;
+
+        /// &lt;summary&gt;
+        /// A callback function which will be called every Time a mouse activity detected.
+        /// &lt;/summary&gt;
+        /// &lt;param name="nCode"&gt;
+        /// [in] Specifies whether the hook procedure must process the message. 
+        /// If nCode is HC_ACTION, the hook procedure must process the message. 
+        /// If nCode is less than zero, the hook procedure must pass the message to the 
+        /// CallNextHookEx function without further processing and must return the 
+        /// value returned by CallNextHookEx.
+        /// &lt;/param&gt;
+        /// &lt;param name="wParam"&gt;
+        /// [in] Specifies whether the message was sent by the current thread. 
+        /// If the message was sent by the current thread, it is nonzero; otherwise, it is zero. 
+        /// &lt;/param&gt;
+        /// &lt;param name="lParam"&gt;
+        /// [in] Pointer to a CWPSTRUCT structure that contains details about the message. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// If nCode is less than zero, the hook procedure must return the value returned by CallNextHookEx. 
+        /// If nCode is greater than or equal to zero, it is highly recommended that you call CallNextHookEx 
+        /// and return the value it returns; otherwise, other applications that have installed WH_CALLWNDPROC 
+        /// hooks will not receive hook notifications and may behave incorrectly as a result. If the hook 
+        /// procedure does not call CallNextHookEx, the return value should be zero. 
+        /// &lt;/returns&gt;
+        private static int MouseHookProc(int nCode, int wParam, IntPtr lParam)
+        {
+            if (nCode &gt;= 0)
+            {
+                //Marshall the data from callback.
+                MouseLLHookStruct mouseHookStruct = (MouseLLHookStruct)Marshal.PtrToStructure(lParam, typeof(MouseLLHookStruct));
+
+                //detect button clicked
+                MouseButtons button = MouseButtons.None;
+                short mouseDelta = 0;
+                int clickCount = 0;
+                bool mouseDown = false;
+                bool mouseUp = false;
+
+                switch (wParam)
+                {
+                    case WM_LBUTTONDOWN:
+                        mouseDown = true;
+                        button = MouseButtons.Left;
+                        clickCount = 1;
+                        break;
+                    case WM_LBUTTONUP:
+                        mouseUp = true;
+                        button = MouseButtons.Left;
+                        clickCount = 1;
+                        break;
+                    case WM_LBUTTONDBLCLK: 
+                        button = MouseButtons.Left;
+                        clickCount = 2;
+                        break;
+                    case WM_RBUTTONDOWN:
+                        mouseDown = true;
+                        button = MouseButtons.Right;
+                        clickCount = 1;
+                        break;
+                    case WM_RBUTTONUP:
+                        mouseUp = true;
+                        button = MouseButtons.Right;
+                        clickCount = 1;
+                        break;
+                    case WM_RBUTTONDBLCLK: 
+                        button = MouseButtons.Right;
+                        clickCount = 2;
+                        break;
+                    case WM_MOUSEWHEEL:
+                        //If the message is WM_MOUSEWHEEL, the high-order word of MouseData member is the wheel delta. 
+                        //One wheel click is defined as WHEEL_DELTA, which is 120. 
+                        //(value &gt;&gt; 16) &amp; 0xffff; retrieves the high-order word from the given 32-bit value
+                        mouseDelta = (short)((mouseHookStruct.MouseData &gt;&gt; 16) &amp; 0xffff);
+                       
+                    //TODO: X BUTTONS (I havent them so was unable to test)
+                        //If the message is WM_XBUTTONDOWN, WM_XBUTTONUP, WM_XBUTTONDBLCLK, WM_NCXBUTTONDOWN, WM_NCXBUTTONUP, 
+                        //or WM_NCXBUTTONDBLCLK, the high-order word specifies which X button was pressed or released, 
+                        //and the low-order word is reserved. This value can be one or more of the following values. 
+                        //Otherwise, MouseData is not used. 
+                        break;
+                }
+
+                //generate event 
+                MouseEventExtArgs e = new MouseEventExtArgs(
+                                                   button,
+                                                   clickCount,
+                                                   mouseHookStruct.Point.X,
+                                                   mouseHookStruct.Point.Y,
+                                                   mouseDelta);
+
+                //Mouse up
+                if (s_MouseUp!=null &amp;&amp; mouseUp)
+                {
+                    s_MouseUp.Invoke(null, e);
+                }
+
+                //Mouse down
+                if (s_MouseDown != null &amp;&amp; mouseDown)
+                {
+                    s_MouseDown.Invoke(null, e);
+                }
+
+                //If someone listens to click and a click is heppened
+                if (s_MouseClick != null &amp;&amp; clickCount&gt;0)
+                {
+                    s_MouseClick.Invoke(null, e);
+                }
+
+                //If someone listens to click and a click is heppened
+                if (s_MouseClickExt != null &amp;&amp; clickCount &gt; 0)
+                {
+                    s_MouseClickExt.Invoke(null, e);
+                }
+
+                //If someone listens to double click and a click is heppened
+                if (s_MouseDoubleClick != null &amp;&amp; clickCount == 2)
+                {
+                    s_MouseDoubleClick.Invoke(null, e);
+                }
+
+                //Wheel was moved
+                if (s_MouseWheel!=null &amp;&amp; mouseDelta!=0)
+                {
+                    s_MouseWheel.Invoke(null, e);
+                }
+
+                //If someone listens to move and there was a change in coordinates raise move event
+                if ((s_MouseMove!=null || s_MouseMoveExt!=null) &amp;&amp; (m_OldX != mouseHookStruct.Point.X || m_OldY != mouseHookStruct.Point.Y))
+                {
+                    m_OldX = mouseHookStruct.Point.X;
+                    m_OldY = mouseHookStruct.Point.Y;
+                    if (s_MouseMove != null)
+                    {
+                        s_MouseMove.Invoke(null, e);
+                    }
+
+                    if (s_MouseMoveExt != null)
+                    {
+                        s_MouseMoveExt.Invoke(null, e);
+                    }
+                }
+
+                if (e.Handled)
+                {
+                    return -1;
+                }
+            }
+
+            //call next hook
+            return CallNextHookEx(s_MouseHookHandle, nCode, wParam, lParam);
+        }
+
+        private static void EnsureSubscribedToGlobalMouseEvents()
+        {
+            // install Mouse hook only if it is not installed and must be installed
+            if (s_MouseHookHandle == 0)
+            {
+                //See comment of this field. To avoid GC to clean it up.
+                s_MouseDelegate = MouseHookProc;
+                //install hook
+                s_MouseHookHandle = SetWindowsHookEx(
+                    WH_MOUSE_LL,
+                    s_MouseDelegate,
+                    Marshal.GetHINSTANCE(
+                        Assembly.GetExecutingAssembly().GetModules()[0]),
+                    0);
+                //If SetWindowsHookEx fails.
+                if (s_MouseHookHandle == 0)
+                {
+                    //Returns the error code returned by the last unmanaged function called using platform invoke that has the DllImportAttribute.SetLastError flag set. 
+                    int errorCode = Marshal.GetLastWin32Error();
+                    //do cleanup
+
+                    //Initializes and throws a new instance of the Win32Exception class with the specified error. 
+                    throw new Win32Exception(errorCode);
+                }
+            }
+        }
+
+        private static void TryUnsubscribeFromGlobalMouseEvents()
+        {
+            //if no subsribers are registered unsubsribe from hook
+            if (s_MouseClick == null &amp;&amp;
+                s_MouseDown == null &amp;&amp;
+                s_MouseMove == null &amp;&amp;
+                s_MouseUp == null &amp;&amp;
+                s_MouseClickExt == null &amp;&amp;
+                s_MouseMoveExt == null &amp;&amp;
+                s_MouseWheel == null)
+            {
+                ForceUnsunscribeFromGlobalMouseEvents();
+            }
+        }
+
+        private static void ForceUnsunscribeFromGlobalMouseEvents()
+        {
+            if (s_MouseHookHandle != 0)
+            {
+                //uninstall hook
+                int result = UnhookWindowsHookEx(s_MouseHookHandle);
+                //reset invalid handle
+                s_MouseHookHandle = 0;
+                //Free up for GC
+                s_MouseDelegate = null;
+                //if failed and exception must be thrown
+                if (result == 0)
+                {
+                    //Returns the error code returned by the last unmanaged function called using platform invoke that has the DllImportAttribute.SetLastError flag set. 
+                    int errorCode = Marshal.GetLastWin32Error();
+                    //Initializes and throws a new instance of the Win32Exception class with the specified error. 
+                    throw new Win32Exception(errorCode);
+                }
+            }
+        }
+        
+        #endregion
+
+        //##############################################################################
+        #region Keyboard hook processing
+
+        /// &lt;summary&gt;
+        /// This field is not objectively needed but we need to keep a reference on a delegate which will be 
+        /// passed to unmanaged code. To avoid GC to clean it up.
+        /// When passing delegates to unmanaged code, they must be kept alive by the managed application 
+        /// until it is guaranteed that they will never be called.
+        /// &lt;/summary&gt;
+        private static HookProc s_KeyboardDelegate;
+
+        /// &lt;summary&gt;
+        /// Stores the handle to the Keyboard hook procedure.
+        /// &lt;/summary&gt;
+        private static int s_KeyboardHookHandle;
+
+        /// &lt;summary&gt;
+        /// A callback function which will be called every Time a keyboard activity detected.
+        /// &lt;/summary&gt;
+        /// &lt;param name="nCode"&gt;
+        /// [in] Specifies whether the hook procedure must process the message. 
+        /// If nCode is HC_ACTION, the hook procedure must process the message. 
+        /// If nCode is less than zero, the hook procedure must pass the message to the 
+        /// CallNextHookEx function without further processing and must return the 
+        /// value returned by CallNextHookEx.
+        /// &lt;/param&gt;
+        /// &lt;param name="wParam"&gt;
+        /// [in] Specifies whether the message was sent by the current thread. 
+        /// If the message was sent by the current thread, it is nonzero; otherwise, it is zero. 
+        /// &lt;/param&gt;
+        /// &lt;param name="lParam"&gt;
+        /// [in] Pointer to a CWPSTRUCT structure that contains details about the message. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// If nCode is less than zero, the hook procedure must return the value returned by CallNextHookEx. 
+        /// If nCode is greater than or equal to zero, it is highly recommended that you call CallNextHookEx 
+        /// and return the value it returns; otherwise, other applications that have installed WH_CALLWNDPROC 
+        /// hooks will not receive hook notifications and may behave incorrectly as a result. If the hook 
+        /// procedure does not call CallNextHookEx, the return value should be zero. 
+        /// &lt;/returns&gt;
+        private static int KeyboardHookProc(int nCode, Int32 wParam, IntPtr lParam)
+        {
+            //indicates if any of underlaing events set e.Handled flag
+            bool handled = false;
+
+            if (nCode &gt;= 0)
+            {
+                //read structure KeyboardHookStruct at lParam
+                KeyboardHookStruct MyKeyboardHookStruct = (KeyboardHookStruct)Marshal.PtrToStructure(lParam, typeof(KeyboardHookStruct));
+                //raise KeyDown
+                if (s_KeyDown != null &amp;&amp; (wParam == WM_KEYDOWN || wParam == WM_SYSKEYDOWN))
+                {
+                    Keys keyData = (Keys)MyKeyboardHookStruct.VirtualKeyCode;
+                    KeyEventArgs e = new KeyEventArgs(keyData);
+                    s_KeyDown.Invoke(null, e);
+                    handled = e.Handled;
+                }
+
+                // raise KeyPress
+                if (s_KeyPress != null &amp;&amp; wParam == WM_KEYDOWN)
+                {
+                    bool isDownShift = ((GetKeyState(VK_SHIFT) &amp; 0x80) == 0x80 ? true : false);
+                    bool isDownCapslock = (GetKeyState(VK_CAPITAL) != 0 ? true : false);
+
+                    byte[] keyState = new byte[256];
+                    GetKeyboardState(keyState);
+                    byte[] inBuffer = new byte[2];
+                    if (ToAscii(MyKeyboardHookStruct.VirtualKeyCode,
+                              MyKeyboardHookStruct.ScanCode,
+                              keyState,
+                              inBuffer,
+                              MyKeyboardHookStruct.Flags) == 1)
+                    {
+                        char key = (char)inBuffer[0];
+                        if ((isDownCapslock ^ isDownShift) &amp;&amp; Char.IsLetter(key)) key = Char.ToUpper(key);
+                        KeyPressEventArgs e = new KeyPressEventArgs(key);
+                        s_KeyPress.Invoke(null, e);
+                        handled = handled || e.Handled;
+                    }
+                }
+
+                // raise KeyUp
+                if (s_KeyUp != null &amp;&amp; (wParam == WM_KEYUP || wParam == WM_SYSKEYUP))
+                {
+                    Keys keyData = (Keys)MyKeyboardHookStruct.VirtualKeyCode;
+                    KeyEventArgs e = new KeyEventArgs(keyData);
+                    s_KeyUp.Invoke(null, e);
+                    handled = handled || e.Handled;
+                }
+
+            }
+
+            //if event handled in application do not handoff to other listeners
+            if (handled)
+                return -1;
+
+            //forward to other application
+            return CallNextHookEx(s_KeyboardHookHandle, nCode, wParam, lParam);
+        }
+
+        private static void EnsureSubscribedToGlobalKeyboardEvents()
+        {
+       
+            // install Keyboard hook only if it is not installed and must be installed
+            if (s_KeyboardHookHandle == 0)
+            {
+                //See comment of this field. To avoid GC to clean it up.
+                s_KeyboardDelegate = KeyboardHookProc;
+                //install hook
+
+                s_KeyboardHookHandle = SetWindowsHookEx(
+                    WH_KEYBOARD_LL,
+                    s_KeyboardDelegate,
+                    GetModuleHandle("user32"),
+                    0);
+                //If SetWindowsHookEx fails.
+                if (s_KeyboardHookHandle == 0)
+                {
+                    //Returns the error code returned by the last unmanaged function called using platform invoke that has the DllImportAttribute.SetLastError flag set. 
+                    int errorCode = Marshal.GetLastWin32Error();
+                    //do cleanup
+
+                    //Initializes and throws a new instance of the Win32Exception class with the specified error. 
+                    throw new Win32Exception(errorCode);
+                }
+            }
+        }
+
+        private static void TryUnsubscribeFromGlobalKeyboardEvents()
+        {
+            //if no subsribers are registered unsubsribe from hook
+            if (s_KeyDown == null &amp;&amp;
+                s_KeyUp == null &amp;&amp;
+                s_KeyPress == null)
+            {
+                ForceUnsunscribeFromGlobalKeyboardEvents();
+            }
+        }
+
+        private static void ForceUnsunscribeFromGlobalKeyboardEvents()
+        {
+            if (s_KeyboardHookHandle != 0)
+            {
+                //uninstall hook
+                int result = UnhookWindowsHookEx(s_KeyboardHookHandle);
+                //reset invalid handle
+                s_KeyboardHookHandle = 0;
+                //Free up for GC
+                s_KeyboardDelegate = null;
+                //if failed and exception must be thrown
+                if (result == 0)
+                {
+                    //Returns the error code returned by the last unmanaged function called using platform invoke that has the DllImportAttribute.SetLastError flag set. 
+                    int errorCode = Marshal.GetLastWin32Error();
+                    //Initializes and throws a new instance of the Win32Exception class with the specified error. 
+                    throw new Win32Exception(errorCode);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+}
+</Code><Critical>0</Critical></File><File><Name>HookManager.cs</Name><Code>using System;
+using System.Windows.Forms;
+
+namespace Code {
+
+    /// &lt;summary&gt;
+    /// This class monitors all mouse activities globally (also outside of the application) 
+    /// and provides appropriate events.
+    /// &lt;/summary&gt;
+    public static partial class HookManager
+    {
+        //################################################################
+        #region Mouse events
+
+        private static event MouseEventHandler s_MouseMove;
+
+        /// &lt;summary&gt;
+        /// Occurs when the mouse pointer is moved. 
+        /// &lt;/summary&gt;
+        public static event MouseEventHandler MouseMove
+        {
+            add
+            {
+                EnsureSubscribedToGlobalMouseEvents();
+                s_MouseMove += value;
+            }
+
+            remove
+            {
+                s_MouseMove -= value;
+                TryUnsubscribeFromGlobalMouseEvents();
+            }
+        }
+
+        private static event EventHandler&lt;MouseEventExtArgs&gt; s_MouseMoveExt;
+
+        /// &lt;summary&gt;
+        /// Occurs when the mouse pointer is moved. 
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// This event provides extended arguments of type &lt;see cref="MouseEventArgs"/&gt; enabling you to 
+        /// supress further processing of mouse movement in other applications.
+        /// &lt;/remarks&gt;
+        public static event EventHandler&lt;MouseEventExtArgs&gt; MouseMoveExt
+        {
+            add
+            {
+                EnsureSubscribedToGlobalMouseEvents();
+                s_MouseMoveExt += value;
+            }
+
+            remove
+            {
+
+                s_MouseMoveExt -= value;
+                TryUnsubscribeFromGlobalMouseEvents();
+            }
+        }
+
+        private static event MouseEventHandler s_MouseClick;
+
+        /// &lt;summary&gt;
+        /// Occurs when a click was performed by the mouse. 
+        /// &lt;/summary&gt;
+        public static event MouseEventHandler MouseClick
+        {
+            add
+            {
+                EnsureSubscribedToGlobalMouseEvents();
+                s_MouseClick += value;
+            }
+            remove
+            {
+                s_MouseClick -= value;
+                TryUnsubscribeFromGlobalMouseEvents();
+            }
+        }
+
+        private static event EventHandler&lt;MouseEventExtArgs&gt; s_MouseClickExt;
+
+        /// &lt;summary&gt;
+        /// Occurs when a click was performed by the mouse. 
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// This event provides extended arguments of type &lt;see cref="MouseEventArgs"/&gt; enabling you to 
+        /// supress further processing of mouse click in other applications.
+        /// &lt;/remarks&gt;
+        public static event EventHandler&lt;MouseEventExtArgs&gt; MouseClickExt
+        {
+            add
+            {
+                EnsureSubscribedToGlobalMouseEvents();
+                s_MouseClickExt += value;
+            }
+            remove
+            {
+                s_MouseClickExt -= value;
+                TryUnsubscribeFromGlobalMouseEvents();
+            }
+        }
+
+        private static event MouseEventHandler s_MouseDown;
+
+        /// &lt;summary&gt;
+        /// Occurs when the mouse a mouse button is pressed. 
+        /// &lt;/summary&gt;
+        public static event MouseEventHandler  MouseDown
+        {
+            add 
+            { 
+                EnsureSubscribedToGlobalMouseEvents();
+                s_MouseDown += value;
+            }
+            remove
+            {
+                s_MouseDown -= value;
+                TryUnsubscribeFromGlobalMouseEvents();
+            }
+        }
+
+        private static event MouseEventHandler s_MouseUp;
+
+        /// &lt;summary&gt;
+        /// Occurs when a mouse button is released. 
+        /// &lt;/summary&gt;
+        public static event MouseEventHandler MouseUp
+        {
+            add
+            {
+                EnsureSubscribedToGlobalMouseEvents();
+                s_MouseUp += value;
+            }
+            remove
+            {
+                s_MouseUp -= value;
+                TryUnsubscribeFromGlobalMouseEvents();
+            }
+        }
+
+        private static event MouseEventHandler s_MouseWheel;
+
+        /// &lt;summary&gt;
+        /// Occurs when the mouse wheel moves. 
+        /// &lt;/summary&gt;
+        public static event MouseEventHandler MouseWheel
+        {
+            add
+            {
+                EnsureSubscribedToGlobalMouseEvents();
+                s_MouseWheel += value;
+            }
+            remove
+            {
+                s_MouseWheel -= value;
+                TryUnsubscribeFromGlobalMouseEvents();
+            }
+        }
+
+
+        private static event MouseEventHandler s_MouseDoubleClick;
+
+        //The double click event will not be provided directly from hook.
+        //To fire the double click event wee need to monitor mouse up event and when it occures 
+        //Two times during the time interval which is defined in Windows as a doble click time
+        //we fire this event.
+
+        /// &lt;summary&gt;
+        /// Occurs when a double clicked was performed by the mouse. 
+        /// &lt;/summary&gt;
+        public static event MouseEventHandler MouseDoubleClick
+        {
+            add
+            {
+                EnsureSubscribedToGlobalMouseEvents();
+                if (s_MouseDoubleClick == null)
+                {
+                    //We create a timer to monitor interval between two clicks
+                    s_DoubleClickTimer = new Timer
+                    {
+                        //This interval will be set to the value we retrive from windows. This is a windows setting from contro planel.
+                        Interval = GetDoubleClickTime(),
+                        //We do not start timer yet. It will be start when the click occures.
+                        Enabled = false
+                    };
+                    //We define the callback function for the timer
+                    s_DoubleClickTimer.Tick += DoubleClickTimeElapsed;
+                    //We start to monitor mouse up event.
+                    MouseUp += OnMouseUp;
+                }
+                s_MouseDoubleClick += value;
+            }
+            remove
+            {
+                if (s_MouseDoubleClick != null)
+                {
+                    s_MouseDoubleClick -= value;
+                    if (s_MouseDoubleClick == null)
+                    {
+                        //Stop monitoring mouse up
+                        MouseUp -= OnMouseUp;
+                        //Dispose the timer
+                        s_DoubleClickTimer.Tick -= DoubleClickTimeElapsed;
+                        s_DoubleClickTimer = null;
+                    }
+                }
+                TryUnsubscribeFromGlobalMouseEvents();
+            }
+        }
+
+        //This field remembers mouse button pressed because in addition to the short interval it must be also the same button.
+        private static MouseButtons s_PrevClickedButton;
+        //The timer to monitor time interval between two clicks.
+        private static Timer s_DoubleClickTimer;
+
+        private static void DoubleClickTimeElapsed(object sender, EventArgs e)
+        {
+            //Timer is alapsed and no second click ocuured
+            s_DoubleClickTimer.Enabled = false;
+            s_PrevClickedButton = MouseButtons.None;
+        }
+
+        /// &lt;summary&gt;
+        /// This method is designed to monitor mouse clicks in order to fire a double click event if interval between 
+        /// clicks was short enaugh.
+        /// &lt;/summary&gt;
+        /// &lt;param name="sender"&gt;Is always null&lt;/param&gt;
+        /// &lt;param name="e"&gt;Some information about click heppened.&lt;/param&gt;
+        private static void OnMouseUp(object sender, MouseEventArgs e)
+        {
+            //This should not heppen
+            if (e.Clicks &lt; 1) { return;}
+            //If the secon click heppened on the same button
+            if (e.Button.Equals(s_PrevClickedButton))
+            {
+                if (s_MouseDoubleClick!=null)
+                {
+                    //Fire double click
+                    s_MouseDoubleClick.Invoke(null, e);
+                }
+                //Stop timer
+                s_DoubleClickTimer.Enabled = false;
+                s_PrevClickedButton = MouseButtons.None;
+            }
+            else
+            {
+                //If it was the firts click start the timer
+                s_DoubleClickTimer.Enabled = true;
+                s_PrevClickedButton = e.Button;
+            }
+        }
+        #endregion
+
+        //################################################################
+        #region Keyboard events
+
+        private static event KeyPressEventHandler s_KeyPress;
+
+        /// &lt;summary&gt;
+        /// Occurs when a key is pressed.
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// Key events occur in the following order: 
+        /// &lt;list type="number"&gt;
+        /// &lt;item&gt;KeyDown&lt;/item&gt;
+        /// &lt;item&gt;KeyPress&lt;/item&gt;
+        /// &lt;item&gt;KeyUp&lt;/item&gt;
+        /// &lt;/list&gt;
+        ///The KeyPress event is not raised by noncharacter keys; however, the noncharacter keys do raise the KeyDown and KeyUp events. 
+        ///Use the KeyChar property to sample keystrokes at run time and to consume or modify a subset of common keystrokes. 
+        ///To handle keyboard events only in your application and not enable other applications to receive keyboard events, 
+        /// set the KeyPressEventArgs.Handled property in your form's KeyPress event-handling method to &lt;b&gt;true&lt;/b&gt;. 
+        /// &lt;/remarks&gt;
+        public static event KeyPressEventHandler KeyPress
+        {
+            add
+            {
+                EnsureSubscribedToGlobalKeyboardEvents();
+                s_KeyPress += value;
+            }
+            remove
+            {
+                s_KeyPress -= value;
+                TryUnsubscribeFromGlobalKeyboardEvents();
+            }
+        }
+
+        private static event KeyEventHandler s_KeyUp;
+
+        /// &lt;summary&gt;
+        /// Occurs when a key is released. 
+        /// &lt;/summary&gt;
+        public static event KeyEventHandler KeyUp
+        {
+            add
+            {
+                EnsureSubscribedToGlobalKeyboardEvents();
+                s_KeyUp += value;
+            }
+            remove
+            {
+                s_KeyUp -= value;
+                TryUnsubscribeFromGlobalKeyboardEvents();
+            }
+        }
+
+        private static event KeyEventHandler s_KeyDown;
+
+        /// &lt;summary&gt;
+        /// Occurs when a key is preseed. 
+        /// &lt;/summary&gt;
+        public static event KeyEventHandler KeyDown
+        {
+            add
+            {
+                EnsureSubscribedToGlobalKeyboardEvents();
+                s_KeyDown += value;
+            }
+            remove
+            {
+                s_KeyDown -= value;
+                TryUnsubscribeFromGlobalKeyboardEvents();
+            }
+        }
+
+
+        #endregion
+    }
+}
+</Code><Critical>0</Critical></File><File><Name>HookManager.Structures.cs</Name><Code>using System.Runtime.InteropServices;
+
+namespace Code {
+
+    public static partial class HookManager {
+        /// &lt;summary&gt;
+        /// The Point structure defines the X- and Y- coordinates of a point. 
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/gdi/rectangl_0tiq.asp
+        /// &lt;/remarks&gt;
+        [StructLayout(LayoutKind.Sequential)]
+        private struct Point {
+            /// &lt;summary&gt;
+            /// Specifies the X-coordinate of the point. 
+            /// &lt;/summary&gt;
+            public int X;
+            /// &lt;summary&gt;
+            /// Specifies the Y-coordinate of the point. 
+            /// &lt;/summary&gt;
+            public int Y;
+        }
+
+        /// &lt;summary&gt;
+        /// The MSLLHOOKSTRUCT structure contains information about a low-level keyboard input event. 
+        /// &lt;/summary&gt;
+        [StructLayout(LayoutKind.Sequential)]
+        private struct MouseLLHookStruct {
+            /// &lt;summary&gt;
+            /// Specifies a Point structure that contains the X- and Y-coordinates of the cursor, in screen coordinates. 
+            /// &lt;/summary&gt;
+            public Point Point;
+            /// &lt;summary&gt;
+            /// If the message is WM_MOUSEWHEEL, the high-order word of this member is the wheel delta. 
+            /// The low-order word is reserved. A positive value indicates that the wheel was rotated forward, 
+            /// away from the user; a negative value indicates that the wheel was rotated backward, toward the user. 
+            /// One wheel click is defined as WHEEL_DELTA, which is 120. 
+            ///If the message is WM_XBUTTONDOWN, WM_XBUTTONUP, WM_XBUTTONDBLCLK, WM_NCXBUTTONDOWN, WM_NCXBUTTONUP,
+            /// or WM_NCXBUTTONDBLCLK, the high-order word specifies which X button was pressed or released, 
+            /// and the low-order word is reserved. This value can be one or more of the following values. Otherwise, MouseData is not used. 
+            ///XBUTTON1
+            ///The first X button was pressed or released.
+            ///XBUTTON2
+            ///The second X button was pressed or released.
+            /// &lt;/summary&gt;
+            public int MouseData;
+            /// &lt;summary&gt;
+            /// Specifies the event-injected flag. An application can use the following value to test the mouse Flags. Value Purpose 
+            ///LLMHF_INJECTED Test the event-injected flag.  
+            ///0
+            ///Specifies whether the event was injected. The value is 1 if the event was injected; otherwise, it is 0.
+            ///1-15
+            ///Reserved.
+            /// &lt;/summary&gt;
+            public int Flags;
+            /// &lt;summary&gt;
+            /// Specifies the Time stamp for this message.
+            /// &lt;/summary&gt;
+            public int Time;
+            /// &lt;summary&gt;
+            /// Specifies extra information associated with the message. 
+            /// &lt;/summary&gt;
+            public int ExtraInfo;
+        }
+
+        /// &lt;summary&gt;
+        /// The KBDLLHOOKSTRUCT structure contains information about a low-level keyboard input event. 
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/windowing/hooks/hookreference/hookstructures/cwpstruct.asp
+        /// &lt;/remarks&gt;
+        [StructLayout(LayoutKind.Sequential)]
+        private struct KeyboardHookStruct
+        {
+            /// &lt;summary&gt;
+            /// Specifies a virtual-key code. The code must be a value in the range 1 to 254. 
+            /// &lt;/summary&gt;
+            public int VirtualKeyCode;
+            /// &lt;summary&gt;
+            /// Specifies a hardware scan code for the key. 
+            /// &lt;/summary&gt;
+            public int ScanCode;
+            /// &lt;summary&gt;
+            /// Specifies the extended-key flag, event-injected flag, context code, and transition-state flag.
+            /// &lt;/summary&gt;
+            public int Flags;
+            /// &lt;summary&gt;
+            /// Specifies the Time stamp for this message.
+            /// &lt;/summary&gt;
+            public int Time;
+            /// &lt;summary&gt;
+            /// Specifies extra information associated with the message. 
+            /// &lt;/summary&gt;
+            public int ExtraInfo;
+        }
+    }
+}
+</Code><Critical>0</Critical></File><File><Name>HookManager.Windows.cs</Name><Code>using System;
+using System.Runtime.InteropServices;
+
+namespace Code
+{
+    public static partial class HookManager
+    {
+        #region Windows constants
+
+        //values from Winuser.h in Microsoft SDK.
+        /// &lt;summary&gt;
+        /// Windows NT/2000/XP: Installs a hook procedure that monitors low-level mouse input events.
+        /// &lt;/summary&gt;
+        private const int WH_MOUSE_LL = 14;
+
+        /// &lt;summary&gt;
+        /// Windows NT/2000/XP: Installs a hook procedure that monitors low-level keyboard  input events.
+        /// &lt;/summary&gt;
+        private const int WH_KEYBOARD_LL = 13;
+
+        /// &lt;summary&gt;
+        /// Installs a hook procedure that monitors mouse messages. For more information, see the MouseProc hook procedure. 
+        /// &lt;/summary&gt;
+        private const int WH_MOUSE = 7;
+
+        /// &lt;summary&gt;
+        /// Installs a hook procedure that monitors keystroke messages. For more information, see the KeyboardProc hook procedure. 
+        /// &lt;/summary&gt;
+        private const int WH_KEYBOARD = 2;
+
+        /// &lt;summary&gt;
+        /// The WM_MOUSEMOVE message is posted to a window when the cursor moves. 
+        /// &lt;/summary&gt;
+        private const int WM_MOUSEMOVE = 0x200;
+
+        /// &lt;summary&gt;
+        /// The WM_LBUTTONDOWN message is posted when the user presses the left mouse button 
+        /// &lt;/summary&gt;
+        private const int WM_LBUTTONDOWN = 0x201;
+
+        /// &lt;summary&gt;
+        /// The WM_RBUTTONDOWN message is posted when the user presses the right mouse button
+        /// &lt;/summary&gt;
+        private const int WM_RBUTTONDOWN = 0x204;
+
+        /// &lt;summary&gt;
+        /// The WM_MBUTTONDOWN message is posted when the user presses the middle mouse button 
+        /// &lt;/summary&gt;
+        private const int WM_MBUTTONDOWN = 0x207;
+
+        /// &lt;summary&gt;
+        /// The WM_LBUTTONUP message is posted when the user releases the left mouse button 
+        /// &lt;/summary&gt;
+        private const int WM_LBUTTONUP = 0x202;
+
+        /// &lt;summary&gt;
+        /// The WM_RBUTTONUP message is posted when the user releases the right mouse button 
+        /// &lt;/summary&gt;
+        private const int WM_RBUTTONUP = 0x205;
+
+        /// &lt;summary&gt;
+        /// The WM_MBUTTONUP message is posted when the user releases the middle mouse button 
+        /// &lt;/summary&gt;
+        private const int WM_MBUTTONUP = 0x208;
+
+        /// &lt;summary&gt;
+        /// The WM_LBUTTONDBLCLK message is posted when the user double-clicks the left mouse button 
+        /// &lt;/summary&gt;
+        private const int WM_LBUTTONDBLCLK = 0x203;
+
+        /// &lt;summary&gt;
+        /// The WM_RBUTTONDBLCLK message is posted when the user double-clicks the right mouse button 
+        /// &lt;/summary&gt;
+        private const int WM_RBUTTONDBLCLK = 0x206;
+
+        /// &lt;summary&gt;
+        /// The WM_RBUTTONDOWN message is posted when the user presses the right mouse button 
+        /// &lt;/summary&gt;
+        private const int WM_MBUTTONDBLCLK = 0x209;
+
+        /// &lt;summary&gt;
+        /// The WM_MOUSEWHEEL message is posted when the user presses the mouse wheel. 
+        /// &lt;/summary&gt;
+        private const int WM_MOUSEWHEEL = 0x020A;
+
+        /// &lt;summary&gt;
+        /// The WM_KEYDOWN message is posted to the window with the keyboard focus when a nonsystem 
+        /// key is pressed. A nonsystem key is a key that is pressed when the ALT key is not pressed.
+        /// &lt;/summary&gt;
+        private const int WM_KEYDOWN = 0x100;
+
+        /// &lt;summary&gt;
+        /// The WM_KEYUP message is posted to the window with the keyboard focus when a nonsystem 
+        /// key is released. A nonsystem key is a key that is pressed when the ALT key is not pressed, 
+        /// or a keyboard key that is pressed when a window has the keyboard focus.
+        /// &lt;/summary&gt;
+        private const int WM_KEYUP = 0x101;
+
+        /// &lt;summary&gt;
+        /// The WM_SYSKEYDOWN message is posted to the window with the keyboard focus when the user 
+        /// presses the F10 key (which activates the menu bar) or holds down the ALT key and then 
+        /// presses another key. It also occurs when no window currently has the keyboard focus; 
+        /// in this case, the WM_SYSKEYDOWN message is sent to the active window. The window that 
+        /// receives the message can distinguish between these two contexts by checking the context 
+        /// code in the lParam parameter. 
+        /// &lt;/summary&gt;
+        private const int WM_SYSKEYDOWN = 0x104;
+
+        /// &lt;summary&gt;
+        /// The WM_SYSKEYUP message is posted to the window with the keyboard focus when the user 
+        /// releases a key that was pressed while the ALT key was held down. It also occurs when no 
+        /// window currently has the keyboard focus; in this case, the WM_SYSKEYUP message is sent 
+        /// to the active window. The window that receives the message can distinguish between 
+        /// these two contexts by checking the context code in the lParam parameter. 
+        /// &lt;/summary&gt;
+        private const int WM_SYSKEYUP = 0x105;
+
+        private const byte VK_SHIFT = 0x10;
+        private const byte VK_CAPITAL = 0x14;
+        private const byte VK_NUMLOCK = 0x90;
+
+        #endregion
+
+        #region Windows function imports
+    [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+    private static extern IntPtr GetModuleHandle(string lpModuleName);
+
+        /// &lt;summary&gt;
+        /// The CallNextHookEx function passes the hook information to the next hook procedure in the current hook chain. 
+        /// A hook procedure can call this function either before or after processing the hook information. 
+        /// &lt;/summary&gt;
+        /// &lt;param name="idHook"&gt;Ignored.&lt;/param&gt;
+        /// &lt;param name="nCode"&gt;
+        /// [in] Specifies the hook code passed to the current hook procedure. 
+        /// The next hook procedure uses this code to determine how to process the hook information.
+        /// &lt;/param&gt;
+        /// &lt;param name="wParam"&gt;
+        /// [in] Specifies the wParam value passed to the current hook procedure. 
+        /// The meaning of this parameter depends on the type of hook associated with the current hook chain. 
+        /// &lt;/param&gt;
+        /// &lt;param name="lParam"&gt;
+        /// [in] Specifies the lParam value passed to the current hook procedure. 
+        /// The meaning of this parameter depends on the type of hook associated with the current hook chain. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// This value is returned by the next hook procedure in the chain. 
+        /// The current hook procedure must also return this value. The meaning of the return value depends on the hook type. 
+        /// For more information, see the descriptions of the individual hook procedures.
+        /// &lt;/returns&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/windowing/hooks/hookreference/hookfunctions/setwindowshookex.asp
+        /// &lt;/remarks&gt;
+        [DllImport("user32.dll", CharSet = CharSet.Auto,
+            CallingConvention = CallingConvention.StdCall)]
+        private static extern int CallNextHookEx(
+            int idHook,
+            int nCode,
+            int wParam,
+            IntPtr lParam);
+
+
+        /// &lt;summary&gt;
+        /// The SetWindowsHookEx function installs an application-defined hook procedure into a hook chain. 
+        /// You would install a hook procedure to monitor the system for certain types of events. These events 
+        /// are associated either with a specific thread or with all threads in the same desktop as the calling thread. 
+        /// &lt;/summary&gt;
+        /// &lt;param name="idHook"&gt;
+        /// [in] Specifies the type of hook procedure to be installed. This parameter can be one of the following values.
+        /// &lt;/param&gt;
+        /// &lt;param name="lpfn"&gt;
+        /// [in] Pointer to the hook procedure. If the dwThreadId parameter is zero or specifies the identifier of a 
+        /// thread created by a different process, the lpfn parameter must point to a hook procedure in a dynamic-link 
+        /// library (DLL). Otherwise, lpfn can point to a hook procedure in the code associated with the current process.
+        /// &lt;/param&gt;
+        /// &lt;param name="hMod"&gt;
+        /// [in] Handle to the DLL containing the hook procedure pointed to by the lpfn parameter. 
+        /// The hMod parameter must be set to NULL if the dwThreadId parameter specifies a thread created by 
+        /// the current process and if the hook procedure is within the code associated with the current process. 
+        /// &lt;/param&gt;
+        /// &lt;param name="dwThreadId"&gt;
+        /// [in] Specifies the identifier of the thread with which the hook procedure is to be associated. 
+        /// If this parameter is zero, the hook procedure is associated with all existing threads running in the 
+        /// same desktop as the calling thread. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// If the function succeeds, the return value is the handle to the hook procedure.
+        /// If the function fails, the return value is NULL. To get extended error information, call GetLastError.
+        /// &lt;/returns&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/windowing/hooks/hookreference/hookfunctions/setwindowshookex.asp
+        /// &lt;/remarks&gt;
+        [DllImport("user32.dll", CharSet = CharSet.Auto,
+            CallingConvention = CallingConvention.StdCall, SetLastError = true)]
+        private static extern int SetWindowsHookEx(
+            int idHook,
+            HookProc lpfn,
+            IntPtr hMod,
+            int dwThreadId);
+
+        /// &lt;summary&gt;
+        /// The UnhookWindowsHookEx function removes a hook procedure installed in a hook chain by the SetWindowsHookEx function. 
+        /// &lt;/summary&gt;
+        /// &lt;param name="idHook"&gt;
+        /// [in] Handle to the hook to be removed. This parameter is a hook handle obtained by a previous call to SetWindowsHookEx. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// If the function succeeds, the return value is nonzero.
+        /// If the function fails, the return value is zero. To get extended error information, call GetLastError.
+        /// &lt;/returns&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/windowing/hooks/hookreference/hookfunctions/setwindowshookex.asp
+        /// &lt;/remarks&gt;
+        [DllImport("user32.dll", CharSet = CharSet.Auto,
+            CallingConvention = CallingConvention.StdCall, SetLastError = true)]
+        private static extern int UnhookWindowsHookEx(int idHook);
+
+        /// &lt;summary&gt;
+        /// The GetDoubleClickTime function retrieves the current double-click time for the mouse. A double-click is a series of two clicks of the 
+        /// mouse button, the second occurring within a specified time after the first. The double-click time is the maximum number of 
+        /// milliseconds that may occur between the first and second click of a double-click. 
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;
+        /// The return value specifies the current double-click time, in milliseconds. 
+        /// &lt;/returns&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/en-us/library/ms646258(VS.85).aspx
+        /// &lt;/remarks&gt;
+        [DllImport("user32")]
+        public static extern int GetDoubleClickTime();
+
+        /// &lt;summary&gt;
+        /// The ToAscii function translates the specified virtual-key code and keyboard 
+        /// state to the corresponding character or characters. The function translates the code 
+        /// using the input language and physical keyboard layout identified by the keyboard layout handle.
+        /// &lt;/summary&gt;
+        /// &lt;param name="uVirtKey"&gt;
+        /// [in] Specifies the virtual-key code to be translated. 
+        /// &lt;/param&gt;
+        /// &lt;param name="uScanCode"&gt;
+        /// [in] Specifies the hardware scan code of the key to be translated. 
+        /// The high-order bit of this value is set if the key is up (not pressed). 
+        /// &lt;/param&gt;
+        /// &lt;param name="lpbKeyState"&gt;
+        /// [in] Pointer to a 256-byte array that contains the current keyboard state. 
+        /// Each element (byte) in the array contains the state of one key. 
+        /// If the high-order bit of a byte is set, the key is down (pressed). 
+        /// The low bit, if set, indicates that the key is toggled on. In this function, 
+        /// only the toggle bit of the CAPS LOCK key is relevant. The toggle state 
+        /// of the NUM LOCK and SCROLL LOCK keys is ignored.
+        /// &lt;/param&gt;
+        /// &lt;param name="lpwTransKey"&gt;
+        /// [out] Pointer to the buffer that receives the translated character or characters. 
+        /// &lt;/param&gt;
+        /// &lt;param name="fuState"&gt;
+        /// [in] Specifies whether a menu is active. This parameter must be 1 if a menu is active, or 0 otherwise. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// If the specified key is a dead key, the return value is negative. Otherwise, it is one of the following values. 
+        /// Value Meaning 
+        /// 0 The specified virtual key has no translation for the current state of the keyboard. 
+        /// 1 One character was copied to the buffer. 
+        /// 2 Two characters were copied to the buffer. This usually happens when a dead-key character 
+        /// (accent or diacritic) stored in the keyboard layout cannot be composed with the specified 
+        /// virtual key to form a single character. 
+        /// &lt;/returns&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/userinput/keyboardinput/keyboardinputreference/keyboardinputfunctions/toascii.asp
+        /// &lt;/remarks&gt;
+        [DllImport("user32")]
+        private static extern int ToAscii(
+            int uVirtKey,
+            int uScanCode,
+            byte[] lpbKeyState,
+            byte[] lpwTransKey,
+            int fuState);
+
+        /// &lt;summary&gt;
+        /// The GetKeyboardState function copies the status of the 256 virtual keys to the 
+        /// specified buffer. 
+        /// &lt;/summary&gt;
+        /// &lt;param name="pbKeyState"&gt;
+        /// [in] Pointer to a 256-byte array that contains keyboard key states. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// If the function succeeds, the return value is nonzero.
+        /// If the function fails, the return value is zero. To get extended error information, call GetLastError. 
+        /// &lt;/returns&gt;
+        /// &lt;remarks&gt;
+        /// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/userinput/keyboardinput/keyboardinputreference/keyboardinputfunctions/toascii.asp
+        /// &lt;/remarks&gt;
+        [DllImport("user32")]
+        private static extern int GetKeyboardState(byte[] pbKeyState);
+
+        /// &lt;summary&gt;
+        /// The GetKeyState function retrieves the status of the specified virtual key. The status specifies whether the key is up, down, or toggled 
+        /// (on, off�alternating each time the key is pressed). 
+        /// &lt;/summary&gt;
+        /// &lt;param name="vKey"&gt;
+        /// [in] Specifies a virtual key. If the desired virtual key is a letter or digit (A through Z, a through z, or 0 through 9), nVirtKey must be set to the ASCII value of that character. For other keys, it must be a virtual-key code. 
+        /// &lt;/param&gt;
+        /// &lt;returns&gt;
+        /// The return value specifies the status of the specified virtual key, as follows: 
+        ///If the high-order bit is 1, the key is down; otherwise, it is up.
+        ///If the low-order bit is 1, the key is toggled. A key, such as the CAPS LOCK key, is toggled if it is turned on. The key is off and untoggled if the low-order bit is 0. A toggle key's indicator light (if any) on the keyboard will be on when the key is toggled, and off when the key is untoggled.
+        /// &lt;/returns&gt;
+        /// &lt;remarks&gt;http://msdn.microsoft.com/en-us/library/ms646301.aspx&lt;/remarks&gt;
+        [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        private static extern short GetKeyState(int vKey);
+
+        #endregion
+    }
+}</Code><Critical>0</Critical></File><File><Name>MouseEventExtArgs.cs</Name><Code>using System.Windows.Forms;
+
+namespace Code
+{
+    /// &lt;summary&gt;
+    /// Provides data for the MouseClickExt and MouseMoveExt events. It also provides a property Handled.
+    /// Set this property to &lt;b&gt;true&lt;/b&gt; to prevent further processing of the event in other applications.
+    /// &lt;/summary&gt;
+    public class MouseEventExtArgs : MouseEventArgs
+    {
+        /// &lt;summary&gt;
+        /// Initializes a new instance of the MouseEventArgs class. 
+        /// &lt;/summary&gt;
+        /// &lt;param name="buttons"&gt;One of the MouseButtons values indicating which mouse button was pressed.&lt;/param&gt;
+        /// &lt;param name="clicks"&gt;The number of times a mouse button was pressed.&lt;/param&gt;
+        /// &lt;param name="x"&gt;The x-coordinate of a mouse click, in pixels.&lt;/param&gt;
+        /// &lt;param name="y"&gt;The y-coordinate of a mouse click, in pixels.&lt;/param&gt;
+        /// &lt;param name="delta"&gt;A signed count of the number of detents the wheel has rotated.&lt;/param&gt;
+        public MouseEventExtArgs(MouseButtons buttons, int clicks, int x, int y, int delta)
+            : base(buttons, clicks, x, y, delta)
+        {}
+
+        /// &lt;summary&gt;
+        /// Initializes a new instance of the MouseEventArgs class. 
+        /// &lt;/summary&gt;
+        /// &lt;param name="e"&gt;An ordinary &lt;see cref="MouseEventArgs"/&gt; argument to be extended.&lt;/param&gt;
+        internal MouseEventExtArgs(MouseEventArgs e) : base(e.Button, e.Clicks, e.X, e.Y, e.Delta)
+        {}
+
+        private bool m_Handled;
+
+        /// &lt;summary&gt;
+        /// Set this property to &lt;b&gt;true&lt;/b&gt; inside your event handler to prevent further processing of the event in other applications.
+        /// &lt;/summary&gt;
+        public bool Handled
+        {
+            get { return m_Handled; }
+            set { m_Handled = value; }
+        }
+    }
+}
+</Code><Critical>0</Critical></File></Files><ReferencedAssemeblies><ReferencedAssemebly>Microsoft.CSharp.dll</ReferencedAssemebly><ReferencedAssemebly>System.dll</ReferencedAssemebly><ReferencedAssemebly>System.Core.dll</ReferencedAssemebly><ReferencedAssemebly>System.Data.dll</ReferencedAssemebly><ReferencedAssemebly>System.Xml.dll</ReferencedAssemebly><ReferencedAssemebly>System.Windows.Forms.dll</ReferencedAssemebly><ReferencedAssemebly>System.Drawing.dll</ReferencedAssemebly></ReferencedAssemeblies></Source></Trigger><Action><Name>Mbox</Name><GroupName>Test</GroupName><Description>Test</Description><Active>0</Active><NeedsParams>0</NeedsParams><Source><Files><File><Name>Default.cs</Name><Code>using System;using System.Collections.Generic;using System.Text;//Do not edit namespace, class or method namesnamespace Code{    public class Action    {        //This method will be called to execute the action        //These parameters will come from the form for this Action(Optional)        public void Work(object[] Params)        {            System.Windows.Forms.MessageBox.Show("Hello World");        }    }}</Code><Critical>1</Critical></File></Files><ReferencedAssemeblies><ReferencedAssemebly>Microsoft.CSharp.dll</ReferencedAssemebly><ReferencedAssemebly>System.dll</ReferencedAssemebly><ReferencedAssemebly>System.Core.dll</ReferencedAssemebly><ReferencedAssemebly>System.Data.dll</ReferencedAssemebly><ReferencedAssemebly>System.Xml.dll</ReferencedAssemebly><ReferencedAssemebly>System.Windows.Forms.dll</ReferencedAssemebly><ReferencedAssemebly>System.Drawing.dll</ReferencedAssemebly></ReferencedAssemeblies></Source></Action><Action><Name>Nothing</Name><GroupName>Test</GroupName><Description>Test</Description><Active>0</Active><NeedsParams>0</NeedsParams><Source><Files><File><Name>Default.cs</Name><Code>using System;
+using System.Collections.Generic;
+using System.Text;
+
+//Do not edit namespace, class or method names
+namespace Code
+{
+	public class Action
+	{
+		//This method will be called to execute the action
+		//These parameters will come from the form for this Action(Optional)
+		public void Work(object[] Params)
+		{
+			
+		}
+	}
+}
+</Code><Critical>1</Critical></File></Files><ReferencedAssemeblies><ReferencedAssemebly>Microsoft.CSharp.dll</ReferencedAssemebly><ReferencedAssemebly>System.dll</ReferencedAssemebly><ReferencedAssemebly>System.Core.dll</ReferencedAssemebly><ReferencedAssemebly>System.Data.dll</ReferencedAssemebly><ReferencedAssemebly>System.Xml.dll</ReferencedAssemebly><ReferencedAssemebly>System.Windows.Forms.dll</ReferencedAssemebly><ReferencedAssemebly>System.Drawing.dll</ReferencedAssemebly></ReferencedAssemeblies></Source></Action></Definitions>
