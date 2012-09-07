@@ -154,7 +154,7 @@
             this.importFileButton.Name = "importFileButton";
             this.importFileButton.Size = new System.Drawing.Size(74, 22);
             this.importFileButton.TabIndex = 30;
-            this.importFileButton.Text = "Import file...";
+            this.importFileButton.Text = "Import files...";
             this.importFileButton.UseVisualStyleBackColor = true;
             this.importFileButton.Click += new System.EventHandler(this.importFileButton_Click);
             // 

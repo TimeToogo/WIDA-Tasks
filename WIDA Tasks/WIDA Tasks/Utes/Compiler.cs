@@ -9,7 +9,7 @@ using WIDA.Storage;
 
 namespace WIDA.Utes
 {
-    class Compiler
+    public class Compiler
     {
         /* From http://www.codeproject.com/Articles/9019/Compiling-and-Executing-Code-at-Runtime */
         public Assembly BuildAssembly(string[] Code, string[] ReferencedAssemblies)

@@ -77,6 +77,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -117,6 +118,7 @@
     <Compile Include="Storage\CodeFile.cs" />
     <Compile Include="Storage\Criticals.cs" />
     <Compile Include="Tasks\DataManager.cs" />
+    <Compile Include="Tasks\Definition.cs" />
     <Compile Include="Utes\ObjectSerializer.cs" />
     <Compile Include="Utes\Compiler.cs" />
     <Compile Include="Forms\compilerForm.cs">

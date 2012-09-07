@@ -188,7 +188,7 @@ namespace WIDA
                 return;
             }
             //Give the user a chance to not be stupid
-            if (MessageBox.Show("Think!", "Are you very sure? This is very permanent!", MessageBoxButtons.YesNo) != System.Windows.Forms.DialogResult.Yes)
+            if (MessageBox.Show("Are you very sure? This is very permanent!", "Think!", MessageBoxButtons.YesNo) != System.Windows.Forms.DialogResult.Yes)
                 return;
             Task Task = this.DataManager.Tasks.GetTask(taskGroupDisplayListBox.SelectedItem.ToString(), taskDisplayListBox.SelectedItem.ToString());
             Task.Dispose();

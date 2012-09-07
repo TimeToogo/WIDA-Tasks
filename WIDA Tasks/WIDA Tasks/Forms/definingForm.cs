@@ -9,32 +9,33 @@ using System.Windows.Forms;
 using WIDA.Tasks.Triggers;
 using WIDA.Tasks.Conditions;
 using WIDA.Storage;
+using WIDA.Tasks;
 
 namespace WIDA
 {
     public partial class definingForm : Form
     {
         public bool IsFinished = false;
-        public object ReturnObj = null;
+        public Definition ReturnDefinition = null;
         private string DisplayLabelText;
         private bool IsCodeValid;
         private bool IsFormValid;
         private Source Source;
         private Source Form;
+        private Conf.Definition DefinitionType;
         private bool IsEditing = false;
-        private object OriginalObj = null;
+        private Definition OriginalDefinition = null;
         private Source DefaultSource = new Source();
         private Source DefaultForm = new Source();
         private Criticals Criticals = null;
-        private Conf.Definition Definition;
 
-        public definingForm(string DisplayLabelText, Conf.Definition Definition, Criticals Criticals = null, object OriginalObj = null)
+        public definingForm(string DisplayLabelText, Conf.Definition DefinitionType, Criticals Criticals = null, Definition OriginalDefinition = null)
         {
             this.DisplayLabelText = DisplayLabelText;
             this.Criticals = Criticals;
-            this.IsEditing = (OriginalObj != null);
-            this.OriginalObj = OriginalObj;
-            this.Definition = Definition;
+            this.IsEditing = (OriginalDefinition != null);
+            this.OriginalDefinition = OriginalDefinition;
+            this.DefinitionType = DefinitionType;
             InitializeComponent();
         }
 
@@ -42,15 +43,15 @@ namespace WIDA
         {
             displayLabel.Text = DisplayLabelText;
             DefaultForm.Files.AddRange(Conf.EmptyFormDefaultCode);
-            if (Definition == Conf.Definition.Trigger)
+            if (DefinitionType == Conf.Definition.Trigger)
             {
                 DefaultSource.Files.Add(new File(Conf.DefaultFileName, Conf.TriggerDefaultCode, true));
             }
-            else if (Definition == Conf.Definition.Condition)
+            else if (DefinitionType == Conf.Definition.Condition)
             {
                 DefaultSource.Files.Add(new File(Conf.DefaultFileName, Conf.ConditionDefaultCode, true));
             }
-            else if (Definition == Conf.Definition.Action)
+            else if (DefinitionType == Conf.Definition.Action)
             {
                 DefaultSource.Files.Add(new File(Conf.DefaultFileName, Conf.ActionDefaultCode, true));
             }
@@ -58,36 +59,12 @@ namespace WIDA
             {
                 IsCodeValid = true;
                 IsFormValid = true;
-                if (Definition == Conf.Definition.Trigger)
-                {
-                    Trigger Trigger = (Trigger)OriginalObj;
-                    nameTextBox.Text = Trigger.Name;
-                    groupNameTextBox.Text = Trigger.GroupName;
-                    descriptionTextBox.Text = Trigger.Description;
-                    needParamsCheckBox.Checked = Trigger.NeedsParams;
-                    Form = Trigger.FormSource;
-                    Source = Trigger.Source;
-                }
-                else if (Definition == Conf.Definition.Condition)
-                {
-                    Condition Condition = (Condition)OriginalObj;
-                    nameTextBox.Text = Condition.Name;
-                    groupNameTextBox.Text = Condition.GroupName;
-                    descriptionTextBox.Text = Condition.Description;
-                    needParamsCheckBox.Checked = Condition.NeedsParams;
-                    Form = Condition.FormSource;
-                    Source = Condition.Source;
-                }
-                else if (Definition == Conf.Definition.Action)
-                {
-                    WIDA.Tasks.Actions.Action Action = (WIDA.Tasks.Actions.Action)OriginalObj;
-                    nameTextBox.Text = Action.Name;
-                    groupNameTextBox.Text = Action.GroupName;
-                    descriptionTextBox.Text = Action.Description;
-                    needParamsCheckBox.Checked = Action.NeedsParams;
-                    Form = Action.FormSource;
-                    Source = Action.Source;
-                }
+                nameTextBox.Text = this.OriginalDefinition.Name;
+                groupNameTextBox.Text = this.OriginalDefinition.GroupName;
+                descriptionTextBox.Text = this.OriginalDefinition.Description;
+                needParamsCheckBox.Checked = this.OriginalDefinition.NeedsParams;
+                Form = this.OriginalDefinition.FormSource;
+                Source = this.OriginalDefinition.Source;
             }
         }
 
@@ -146,20 +123,20 @@ namespace WIDA
             string Name = nameTextBox.Text;
             string GroupName = groupNameTextBox.Text;
             string Description = descriptionTextBox.Text;
-            if (Definition == Conf.Definition.Trigger)
+            if (DefinitionType == Conf.Definition.Trigger)
             {
                 Trigger Trigger = new Trigger(Name, GroupName, Description, Source, needParamsCheckBox.Checked, Form);
-                this.ReturnObj = (object)Trigger;
+                this.ReturnDefinition = (Definition)Trigger;
             }
-            else if (Definition == Conf.Definition.Condition)
+            else if (DefinitionType == Conf.Definition.Condition)
             {
                 Condition Condition = new Condition(Name, GroupName, Description, Source, needParamsCheckBox.Checked, Form);
-                this.ReturnObj = (object)Condition;
+                this.ReturnDefinition = (Definition)Condition;
             }
-            else if (Definition == Conf.Definition.Action)
+            else if (DefinitionType == Conf.Definition.Action)
             {
                 WIDA.Tasks.Actions.Action Action = new Tasks.Actions.Action(Name, GroupName, Description, Source, needParamsCheckBox.Checked, Form);
-                this.ReturnObj = (object)Action;
+                this.ReturnDefinition = (Definition)Action;
             }
             IsFinished = true;
             Close();

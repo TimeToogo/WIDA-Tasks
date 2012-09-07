@@ -11,6 +11,7 @@ using WIDA.Tasks.Triggers;
 using WIDA.Tasks.Conditions;
 using WIDA.Tasks.Actions;
 using WIDA.Storage;
+using WIDA.Tasks;
 
 namespace WIDA
 {
@@ -127,22 +128,22 @@ namespace WIDA
             }
         }
 
-        private object showDefiningForm(string displayText, Conf.Definition Definition, Criticals Criticals = null, object Original = null)
+        private Definition showDefiningForm(string displayText, Conf.Definition Definition, Criticals Criticals = null, Definition Original = null)
         {
             definingForm Form = new definingForm(displayText, Definition, Criticals, Original);
             Form.ShowDialog();
             if (Form.IsFinished)
-                return Form.ReturnObj;
+                return Form.ReturnDefinition;
             else
                 return null;
         }
 
         private void newTriggerButton_Click(object sender, EventArgs e)
         {
-            object ReturnObj = showDefiningForm("Please define a new trigger", Conf.Definition.Trigger, Conf.TriggerCriticals);
-            if (ReturnObj != null)
+            Definition ReturnDefinition = showDefiningForm("Please define a new trigger", Conf.Definition.Trigger, Conf.TriggerCriticals);
+            if (ReturnDefinition != null)
             {
-                Trigger Trigger = (Trigger)ReturnObj;
+                Trigger Trigger = (Trigger)ReturnDefinition;
                 Definitions.Triggers.Add(Trigger);
                 UpdateListBoxes();
             }
@@ -156,10 +157,10 @@ namespace WIDA
                 return;
             }
             Trigger Original = Definitions.GetTrigger(triggersGroupListBox.SelectedItem.ToString(), triggersListBox.SelectedItem.ToString());
-            object ReturnObj = showDefiningForm("Please edit this trigger", Conf.Definition.Trigger, Conf.TriggerCriticals, Original);
-            if (ReturnObj != null)
+            Definition ReturnDefinition = showDefiningForm("Please edit this trigger", Conf.Definition.Trigger, Conf.TriggerCriticals, Original);
+            if (ReturnDefinition != null)
             {
-                Trigger Trigger = (Trigger)ReturnObj;
+                Trigger Trigger = (Trigger)ReturnDefinition;
                 Definitions.Triggers[Definitions.Triggers.IndexOf(Original)] = Trigger;
                 UpdateListBoxes();
             }
@@ -179,10 +180,10 @@ namespace WIDA
         private void newConditionButton_Click(object sender, EventArgs e)
         {
             string[] Criticals = new string[3];
-            object ReturnObj = showDefiningForm("Please define a new condition", Conf.Definition.Condition, Conf.ConditionCriticals);
-            if (ReturnObj != null)
+            Definition ReturnDefinition = showDefiningForm("Please define a new condition", Conf.Definition.Condition, Conf.ConditionCriticals);
+            if (ReturnDefinition != null)
             {
-                Condition Condition = (Condition)ReturnObj;
+                Condition Condition = (Condition)ReturnDefinition;
                 Definitions.Conditions.Add(Condition);
                 UpdateListBoxes();
             }
@@ -196,10 +197,10 @@ namespace WIDA
                 return;
             }
             Condition Original = Definitions.GetCondition(conditionsGroupListBox.SelectedItem.ToString(), conditionsListBox.SelectedItem.ToString());
-            object ReturnObj = showDefiningForm("Please edit this condition", Conf.Definition.Condition, Conf.ConditionCriticals, Original);
-            if (ReturnObj != null)
+            Definition ReturnDefinition = showDefiningForm("Please edit this condition", Conf.Definition.Condition, Conf.ConditionCriticals, Original);
+            if (ReturnDefinition != null)
             {
-                Condition Condition = (Condition)ReturnObj;
+                Condition Condition = (Condition)ReturnDefinition;
                 Definitions.Conditions[Definitions.Conditions.IndexOf(Original)] = Condition;
                 UpdateListBoxes();
             }
@@ -218,10 +219,10 @@ namespace WIDA
 
         private void newActionButton_Click(object sender, EventArgs e)
         {
-            object ReturnObj = showDefiningForm("Please define a new action", Conf.Definition.Action, Conf.ActionCriticals);
-            if (ReturnObj != null)
+            Definition ReturnDefinition = showDefiningForm("Please define a new action", Conf.Definition.Action, Conf.ActionCriticals);
+            if (ReturnDefinition != null)
             {
-                WIDA.Tasks.Actions.Action Action = (WIDA.Tasks.Actions.Action)ReturnObj;
+                WIDA.Tasks.Actions.Action Action = (WIDA.Tasks.Actions.Action)ReturnDefinition;
                 Definitions.Actions.Add(Action);
                 UpdateListBoxes();
             }
@@ -235,10 +236,10 @@ namespace WIDA
                 return;
             }
             WIDA.Tasks.Actions.Action Original = Definitions.GetAction(actionsGroupListBox.SelectedItem.ToString(), actionsListBox.SelectedItem.ToString());
-            object ReturnObj = showDefiningForm("Please edit this action", Conf.Definition.Action, Conf.ActionCriticals, Original);
-            if (ReturnObj != null)
+            object ReturnDefinition = showDefiningForm("Please edit this action", Conf.Definition.Action, Conf.ActionCriticals, Original);
+            if (ReturnDefinition != null)
             {
-                WIDA.Tasks.Actions.Action Action = (WIDA.Tasks.Actions.Action)ReturnObj;
+                WIDA.Tasks.Actions.Action Action = (WIDA.Tasks.Actions.Action)ReturnDefinition;
                 Definitions.Actions[Definitions.Actions.IndexOf(Original)] = Action;
                 UpdateListBoxes();
             }
