@@ -14,6 +14,58 @@ namespace WIDA.Storage
         public List<Condition> Conditions = new List<Condition>();
         public List<WIDA.Tasks.Actions.Action> Actions = new List<WIDA.Tasks.Actions.Action>();
 
+        //Load all triggers, conditions and actions from the supplied XML doc
+        public void LoadXML(XmlDocument Doc)
+        {
+            XmlElement TriggersElement = (XmlElement)Doc.GetElementsByTagName("Triggers")[0];
+            foreach (XmlElement Element in TriggersElement.ChildNodes)
+            {
+                Trigger Trigger = this.GetTriggerNonConflictingName(new Trigger(Element));
+                Triggers.Add(Trigger);
+            }
+
+            XmlElement ConditionsElement = (XmlElement)Doc.GetElementsByTagName("Conditions")[0];
+            foreach (XmlElement Element in ConditionsElement.ChildNodes)
+            {
+                Condition Condition = this.GetConditionNonConflictingName(new Condition(Element));
+                Conditions.Add(Condition);
+            }
+
+            XmlElement ActionsElement = (XmlElement)Doc.GetElementsByTagName("Actions")[0];
+            foreach (XmlElement Element in ActionsElement.ChildNodes)
+            {
+                WIDA.Tasks.Actions.Action Action = this.GetActionNonConflictingName(new WIDA.Tasks.Actions.Action(Element));
+                Actions.Add(Action);
+            }
+        }
+
+        //Returns a XML doc from the triggers, conditions and actions
+        public XmlDocument ToXML()
+        {
+            XmlDocument Doc = new XmlDocument();
+
+            XmlElement ParentElement = Doc.CreateElement("Definitions");
+
+            XmlElement TriggersElement = Doc.CreateElement("Triggers");
+            foreach (Trigger Trigger in Triggers)
+                TriggersElement.AppendChild(Trigger.ToXML(Doc));
+
+            XmlElement ConditionsElement = Doc.CreateElement("Conditions");
+            foreach (Condition Condition in Conditions)
+                ConditionsElement.AppendChild(Condition.ToXML(Doc));
+
+            XmlElement ActionsElement = Doc.CreateElement("Actions");
+            foreach (WIDA.Tasks.Actions.Action Action in Actions)
+                ActionsElement.AppendChild(Action.ToXML(Doc));
+
+            ParentElement.AppendChild(TriggersElement);
+            ParentElement.AppendChild(ConditionsElement);
+            ParentElement.AppendChild(ActionsElement);
+            Doc.AppendChild(ParentElement);
+
+            return Doc;
+        }
+
         public int TotalCount()
         {
             return this.Triggers.Count + this.Conditions.Count + this.Actions.Count;
@@ -170,41 +222,6 @@ namespace WIDA.Storage
                     Actions.Add(Action);
 
             return Actions.ToArray();
-        }
-
-        public void LoadXML(XmlDocument Doc)
-        {
-            foreach (XmlElement Element in Doc.GetElementsByTagName("Trigger"))
-            {
-                Trigger Trigger = this.GetTriggerNonConflictingName(new Trigger(Element));
-                Triggers.Add(Trigger);
-            }
-            foreach (XmlElement Element in Doc.GetElementsByTagName("Condition"))
-            {
-                Condition Condition = this.GetConditionNonConflictingName(new Condition(Element));
-                Conditions.Add(Condition);
-            }
-            foreach (XmlElement Element in Doc.GetElementsByTagName("Action"))
-            {
-                WIDA.Tasks.Actions.Action Action = this.GetActionNonConflictingName(new WIDA.Tasks.Actions.Action(Element));
-                Actions.Add(Action);
-            }
-        }
-
-        public XmlDocument ToXML()
-        {
-            XmlDocument Doc = new XmlDocument();
-
-            XmlElement Element = Doc.CreateElement("Definitions");
-            foreach (Trigger Trigger in Triggers)
-                Element.AppendChild(Trigger.ToXML(Doc));
-            foreach (Condition Condition in Conditions)
-                Element.AppendChild(Condition.ToXML(Doc));
-            foreach (WIDA.Tasks.Actions.Action Action in Actions)
-                Element.AppendChild(Action.ToXML(Doc));
-            Doc.AppendChild(Element);
-
-            return Doc;
         }
     }
 }

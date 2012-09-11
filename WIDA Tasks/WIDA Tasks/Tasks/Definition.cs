@@ -67,13 +67,13 @@ namespace WIDA.Tasks
         }
 
         //Convert Definition to an XML Element in the same format as the constructor requires (Allow to be overridden)
-        protected XmlElement ToXML(string ElementName, XmlDocument DocArg = null)
+        public virtual XmlElement ToXML(XmlDocument DocArg = null)
         {
             XmlDocument Doc = DocArg;
             if (Doc == null)
                 Doc = new XmlDocument();
 
-            XmlElement Element = Doc.CreateElement(ElementName);
+            XmlElement Element = Doc.CreateElement("Definition");
 
             XmlElement NameElement = Doc.CreateElement("Name");
             NameElement.InnerText = this.Name;

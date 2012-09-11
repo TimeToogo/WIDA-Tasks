@@ -28,11 +28,6 @@ namespace WIDA.Tasks.Conditions
 
         }
 
-        public XmlElement ToXML(XmlDocument DocArg = null)
-        {
-            return base.ToXML("Condition", DocArg);
-        }
-
         public Condition Clone()
         {
             return new Condition(this.ToXML());

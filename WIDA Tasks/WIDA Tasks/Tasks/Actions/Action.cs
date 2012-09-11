@@ -27,11 +27,6 @@ namespace WIDA.Tasks.Actions
 
         }
 
-        public XmlElement ToXML(XmlDocument DocArg = null)
-        {
-            return base.ToXML("Action", DocArg);
-        }
-
         public Action Clone()
         {
             return new Action(this.ToXML());

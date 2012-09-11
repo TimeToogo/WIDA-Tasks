@@ -27,11 +27,6 @@ namespace WIDA.Tasks.Triggers
 
         }
 
-        public XmlElement ToXML(XmlDocument DocArg = null)
-        {
-            return base.ToXML("Trigger", DocArg);
-        }
-
         public Trigger Clone()
         {
             return new Trigger(this.ToXML());

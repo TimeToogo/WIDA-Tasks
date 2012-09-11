@@ -16,6 +16,23 @@ namespace WIDA.Storage
             return TaskList.Count;
         }
 
+        public void LoadXML(XmlDocument Doc)
+        {
+            foreach (XmlElement Element in Doc.GetElementsByTagName("Task"))
+                TaskList.Add(this.GetTaskNonConflictingName(new Task(Element)));
+        }
+
+        public XmlDocument ToXML()
+        {
+            XmlDocument Doc = new XmlDocument();
+            XmlElement Element = Doc.CreateElement("Tasks");
+            foreach (Task Task in TaskList)
+                Element.AppendChild(Task.ToXML(Doc));
+            Doc.AppendChild(Element);
+
+            return Doc;
+        }
+
         public Task GetTask(string GroupName, string Name)
         {
             foreach (Task Task in this.TaskList)
@@ -66,23 +83,6 @@ namespace WIDA.Storage
                     Tasks.Add(Task);
 
             return Tasks.ToArray();
-        }
-
-        public void LoadXML(XmlDocument Doc)
-        {
-            foreach (XmlElement Element in Doc.GetElementsByTagName("Task"))
-                TaskList.Add(this.GetTaskNonConflictingName(new Task(Element)));
-        }
-
-        public XmlDocument ToXML()
-        {
-            XmlDocument Doc = new XmlDocument();
-            XmlElement Element = Doc.CreateElement("Tasks");
-            foreach (Task Task in TaskList)
-                Element.AppendChild(Task.ToXML(Doc));
-            Doc.AppendChild(Element);
-
-            return Doc;
         }
     }
 }

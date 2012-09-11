@@ -91,3 +91,24 @@ C:\Users\User\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA T
 C:\Users\User\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\bin\Debug\ICSharpCode.AvalonEdit.xml
 C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\bin\Debug\Lzma#.dll
 C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\bin\Debug\Lzma#.pdb
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Debug\WIDA.Forms.AboutForm.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Debug\WIDA.compilerForm.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Debug\WIDA.createTaskForm.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Debug\WIDA.definingDisplayForm.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Debug\WIDA.definingForm.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Debug\WIDA.mainForm.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Debug\WIDA.Forms.optionsForm.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Debug\WIDA.Forms.referencedAssembliesForm.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Debug\WIDA.Properties.Resources.resources
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Debug\WIDA Tasks.exe
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\bin\Debug\WIDA Tasks.exe.config
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\bin\Debug\WIDA Tasks.exe
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\bin\Debug\WIDA Tasks.pdb
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\bin\Debug\ICSharpCode.AvalonEdit.dll
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\bin\Debug\Lzma#.dll
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\bin\Debug\Lzma#.pdb
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\bin\Debug\ICSharpCode.AvalonEdit.xml
+C:\Users\Elliot\Documents\Visual Studio 2010\Projects\WIDA Tasks\WIDA Tasks\WIDA Tasks\WIDA Tasks\obj\x86\Debug\WIDA Tasks.pdb

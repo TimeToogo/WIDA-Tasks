@@ -30,6 +30,7 @@ namespace WIDA
             //Initialize unhandled exception handlers
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(UnhandledException);
             Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(UnhandledThreadException);
+
             //Load all files with DataManager class
             DataManager.Load();
             DataManager.AutoSave.Start();
@@ -288,6 +289,9 @@ namespace WIDA
         //Shutdown application
         private void Exit()
         {
+            this.DataManager.AutoSave.Stop();
+            this.DataManager.Save(true);
+            this.DataManager.Tasks.TaskList.ForEach(Task => Task.Dispose());
             Application.Exit();
         }
 
@@ -299,12 +303,6 @@ namespace WIDA
             {
                 e.Cancel = true;
                 HideForm();
-            }
-            //Else save and exit
-            else
-            {
-                this.DataManager.AutoSave.Stop();
-                this.DataManager.Save(true);
             }
         }
 

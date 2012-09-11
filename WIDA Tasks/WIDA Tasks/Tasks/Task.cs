@@ -51,23 +51,26 @@ namespace WIDA.Tasks
             this.GroupName = Element.GetElementsByTagName("GroupName")[0].InnerText;
             this.Description = Element.GetElementsByTagName("Description")[0].InnerText;
             this.Active = Element.GetElementsByTagName("Active")[0].InnerText == "1";
-            foreach (XmlElement ActionElement in Element.GetElementsByTagName("Action"))
+            XmlElement TriggersElement = (XmlElement)Element.GetElementsByTagName("Triggers")[0];
+            foreach (XmlElement TriggerElement in TriggersElement.ChildNodes)
             {
-                Actions.Action Action = new Actions.Action(ActionElement);
-                Actions.Add(Action);
-                Action.AssignTask(this);
+                Trigger Trigger = new Trigger(TriggerElement);
+                Triggers.Add(Trigger);
+                Trigger.AssignTask(this);
             }
-            foreach (XmlElement ConditionElement in Element.GetElementsByTagName("Condition"))
+            XmlElement ConditionsElement = (XmlElement)Element.GetElementsByTagName("Conditions")[0];
+            foreach (XmlElement ConditionElement in ConditionsElement.ChildNodes)
             {
                 Condition Condition = new Condition(ConditionElement);
                 Conditions.Add(Condition);
                 Condition.AssignTask(this);
             }
-            foreach (XmlElement TriggerElement in Element.GetElementsByTagName("Trigger"))
+            XmlElement ActionsElement = (XmlElement)Element.GetElementsByTagName("Actions")[0];
+            foreach (XmlElement ActionElement in ActionsElement.ChildNodes)
             {
-                Trigger Trigger = new Trigger(TriggerElement);
-                Triggers.Add(Trigger);
-                Trigger.AssignTask(this);
+                Actions.Action Action = new Actions.Action(ActionElement);
+                Actions.Add(Action);
+                Action.AssignTask(this);
             }
         }
 
@@ -132,21 +135,21 @@ namespace WIDA.Tasks
         public void Dispose()
         {
             this.Active = false;
-            foreach (Actions.Action Action in this.Actions)
+            foreach (Trigger Trigger in this.Triggers)
             {
-                Action.Dispose();
+                Trigger.Dispose();
             }
             foreach (Condition Condition in this.Conditions)
             {
                 Condition.Dispose();
             }
-            foreach (Trigger Trigger in this.Triggers)
+            foreach (Actions.Action Action in this.Actions)
             {
-                Trigger.Dispose();
+                Action.Dispose();
             }
-            this.Actions.Clear();
-            this.Conditions.Clear();
             this.Triggers.Clear();
+            this.Conditions.Clear();
+            this.Actions.Clear();
         }
     }
 }
